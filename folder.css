@@ -1,0 +1,34 @@
+.devices {
+	margin-top:			60px;
+	text-align:			center;
+}
+.devices a {
+	color:				#FFFFFF;
+	text-decoration:	none;
+}
+.devices h2 {
+	font-size:			30px;
+}
+.devices div{
+	display:			inline-block;
+	margin:				8px;
+}
+.devices img {
+	border-color:		#0066DD;
+	border-style:		solid;
+	border-width:		4px;
+}
+.spec_table {
+	width:				800px;
+	margin:				auto;
+}
+.spec_table table {
+	text-align:			center;
+	border-collapse:	collapse;
+}
+.spec_table table th, td {
+	border-color:		#0066DD;
+	background-color:	#555555;
+	border-style:		solid;
+	padding:			5px;
+}
