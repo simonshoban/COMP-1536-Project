@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="resposive_base_test.css">
+		<link rel="stylesheet" href="sign_up.css">
+		<title>Sign Up</title>
+	</head>
+	<body>
+	<span id="banner">
+	</span>
+	
+	<div class="page">
+		<header>
+			<a href=""><img id="logo" src="images/GR8.png" alt="GR8"></a>
+			<div id="login">
+				<a href="">Log in</a><BR><a href="">Sign up</a>
+			</div>
+			<form id="search">
+				<input id="search-field" type="text"><input id="search-button" type="submit" Value="Search">
+			</form>
+			
+		</header>
+		<nav>
+			<ul>
+				<li id="console"><a href="devices/console.html">Console</a>
+					<div class = "dropdown">
+						<a href = "ps4.html">PlayStation 4</a>
+						<a href = "xbone.html">Xbox One</a>
+						<a href = "switch.html">Nintendo Switch</a>
+					</div>
+				</li>
+				<li id="pc"><a href="devices/pc.html">PC</a></li>
+				<li id="handheld"><a href="handheld.html">Handheld</a>
+					<div class = "dropdown">
+						<a href = "vita.html">PlayStation Vita</a>
+						<a href = "3ds.html">Nintendo 3DS</a>
+					</div>
+				</li>
+				<li id="mobile"><a href="devices/mobile.html">Mobile</a>
+					<div class = "dropdown">
+						<a href = "ios.html">iOS</a>
+						<a href = "android.html">Android</a>
+					</div>
+				</li>
+				<li id="about"><a href="about.html">About</a></li>
+			</ul>
+		</nav>
+		<Main>
+			<h1>Sign Up</h1>
+			
+				<form class="sign_up" method="post">
+				<div>
+					<label for="username">Username</label>
+					<input type="text" name="username" placeholder="Username">
+					
+				</div>
+				<div>
+					<label for="email">Email</label>
+					<input type="email" name="email" placeholder="Email">
+				</div>
+				<div>
+					<label for="password">Password</label>
+					<input type="password" name="password">
+				</div>
+				<div>
+					<label for="password_confirm">Confirm Password</label>
+					<input type="password" name="password_confirm">
+				</div>
+				<div>
+					<label for="gender">Gender</label>
+					<input type="radio" name="gender" value="male"> Male
+					<input type="radio" name="gender" value="female"> Female
+					<input type="radio" name="gender" value="other"> Other
+				</div>
+				<div>
+					<label for="date">Date of Birth</label>
+					<input type="date" name="birthday" placeholder="yyyy-mm-dd">
+				</div>
+				<div>
+					<input id="terms_box"} type="checkbox" name="terms_agree">
+					<label id="terms_label" for="terms_agree">Agree to Terms and Conditions</label>
+				</div>
+				<div>
+					<input id="submit" type="submit" value="Sign Up">
+				</div>
+				</form>
+		</main>
+		<footer>
+		
+			<p>Copyright &copy; 2017</p>
+			<span id="social_media">
+			<!--icons from https://www.iconfinder.com/Io9mkt-->
+				<a href=""><img src="images/social_media/facebook.png" alt="facebook"></a>
+				<a href=""><img src="images/social_media/twitter.png" alt="twitter"></a>
+				<a href=""><img src="images/social_media/youtube.png" alt="youtube"></a>
+			</span>
+		</footer>
+	</div>
+	</body>
+</html>
