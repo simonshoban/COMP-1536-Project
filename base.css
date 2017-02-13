@@ -30,6 +30,7 @@ header {
 	padding: 			0px;
 	margin: 			0px;
 	z-index:			10;
+	background-color: 	#333333;
 }
 #logo {
 	position:			absolute;
