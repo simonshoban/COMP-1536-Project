@@ -138,7 +138,7 @@ footer {
 	bottom:				0px;
 	text-align:			center;
 	display:			flex;
-	align-items:		center; /*this selector doesn't look legit*/
+	align-items:		center; /*this selector doesn't look legit, notepad doesn't detect it*/
 }
 footer p {
 	margin: 			0px auto;
