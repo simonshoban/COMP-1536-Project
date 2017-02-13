@@ -1,155 +1,151 @@
 html {
-	min-height:100vh;
-	margin:0;
+	min-height:			100vh;
+	margin:				0;
 }
 body {
-	background-color: #8e8e8e;
-	background: radial-gradient(circle, #006699, #24292B);
-	color: #ffffff;
-	margin: 0px;
-	min-height:100vh;
-	font-family: "MS Sans Serif";
+	background-color: 	#8E8E8E;
+	background: 		radial-gradient(circle, #006699, #24292B);
+	color: 				#FFFFFF;
+	margin: 			0px;
+	min-height:			100vh;
+	font-family: 		"MS Sans Serif";
 }
 #banner {
-	position: absolute;
-	background-color: #333333;
-	width: 100%;
-	height: 75px;
-
+	position: 			absolute;
+	background-color: 	#333333;
+	width: 				100%;
+	height: 			75px;
 }
 .page {
-	position:relative;
-	background-color: #444444;
-	width: 1000px;
-	margin: 0px auto;
-	min-height:100vh;
+	position:			relative;
+	background-color: 	#444444;
+	width: 				1000px;
+	margin: 			0px auto;
+	min-height:			100vh;
 }
-
 header {
-	position: relative;
-	width: 100%;
-	height: 75px;
-	padding: 0px;
-	margin: 0px;
-	z-index:10;
+	position: 			relative;
+	width: 				100%;
+	height: 			75px;
+	padding: 			0px;
+	margin: 			0px;
+	z-index:			10;
 }
 #logo {
-	position:absolute;
-	bottom: 0px;
+	position:			absolute;
+	bottom: 			0px;
 }
 #login {
-	position:absolute;
-	top: 0px;
-	right: 0px;
-	
+	position:			absolute;
+	top: 				0px;
+	right: 				0px;
 }
 #login a {
-	display:inline-block;
-	background-color :#555555;
-	color: white;
-	width: 100px;
-	padding: 3px 0px;
-	text-decoration:none;
-	text-align:center;
-	margin-left: 2px;
+	display:			inline-block;
+	background-color:	#555555;
+	color: 				#FFFFFF;
+	width: 				100px;
+	padding: 			3px 0px;
+	text-decoration:	none;
+	text-align:			center;
+	margin-left: 		2px;
 }
 #login a:hover {
-	background-color: #666666
+	background-color: 	#666666
 }
 #search {
-	position:absolute;
-	right: 0px;
-	bottom: 0px;
-	margin: 0;
+	position:			absolute;
+	right: 				0px;
+	bottom: 			0px;
+	margin: 			0;
 }
 #search-field {
-	padding:5px 10px;
-	margin: 0;
+	padding:			5px 10px;
+	margin: 			0;
 }
 #search-button {
-	height:26.5px;
-	border: none;
-	background-color: #555555;
-	color: #ffffff;
-	margin: 0;
-	width: 100px;
-	cursor: pointer;
+	height:				26.5px;
+	border: 			none;
+	background-color: 	#555555;
+	color: 				#FFFFFF;
+	margin: 			0;
+	width: 				100px;
+	cursor: 			pointer;
 }
 #search-button:hover{
-	background-color: #666666;
+	background-color: 	#666666;
 }
 nav {
-	vertical-align:bottom;
+	vertical-align:		bottom;
 }
 nav ul {
-	font-size: 0;
-	margin: 0;
-	padding: 0;
-	background-color: #8e8e8e;
-	width: 100%
+	font-size: 			0;
+	margin: 			0;
+	padding: 			0;
+	background-color: 	#8E8E8E;
+	width: 				100%
 }
 nav ul li {
-	color: white;
-	font-size:medium;
-	display: inline-block;
-	margin-right: 1px;
-	text-align:center;
-	position:relative;
+	color: 				#FFFFFF;
+	font-size:			medium;
+	display: 			inline-block;
+	margin-right: 		1px;
+	text-align:			center;
+	position:			relative;
 }
 nav ul li a {
-	font-size: 1.2em;
-	display: inline-block;
-	color: white;
-	text-decoration: none;
-	padding: 10px 0px;
-	width: 199.2px;
-	background-color: #0066dd;
+	font-size: 			1.2em;
+	display: 			inline-block;
+	color: 				#FFFFFF;
+	text-decoration: 	none;
+	padding: 			10px 0px;
+	width: 				199.2px;
+	background-color: 	#0066DD;
 }
 nav ul li a:hover {
-	background-color: #0099dd;
+	background-color: 	#0099DD;
 }
 .dropdown {
-	font-size:medium;
-	display:none;
-	position: absolute;
-	width:199.2px;
-	left:0px;
+	font-size:			medium;
+	display:			none;
+	position: 			absolute;
+	width:				199.2px;
+	left:				0px;
 }
 .dropdown a {
-	display: inline-block;
-	color: black;
-	background-color:#eeeeee;
-	text-decoration: none;
-	text-align: center;
-	padding: 8px 0px 8px;
-	width: 199.2px;
+	display: 			inline-block;
+	color: 				#000000;
+	background-color:	#EEEEEE;
+	text-decoration: 	none;
+	text-align: 		center;
+	padding: 			8px 0px 8px;
+	width: 				199.2px;
 }
 nav ul li:hover .dropdown, .dropdown:hover{
-	display: block;
+	display: 			block;
 }
 #about {
-	margin-right: 0px;
+	margin-right: 		0px;
 }
 main {
-	padding-bottom:60px;
+	padding-bottom:		60px;
 }
 footer {
-	width: 1000px;
-	background-color: #222222;
-	height: 60px;
-	position:absolute;
-	bottom:0px;
-	text-align:center;
-	display:flex;
-	align-items:center;
-	
+	width: 				1000px;
+	background-color: 	#222222;
+	height: 			60px;
+	position:			absolute;
+	bottom:				0px;
+	text-align:			center;
+	display:			flex;
+	align-items:		center; /*this selector doesn't look legit*/
 }
 footer p {
-	margin: 0px auto;
-	padding: 10px;
+	margin: 			0px auto;
+	padding: 			10px;
 }
 #social_media {
-	padding-right: 10px;
-	position:absolute;
-	right:0;
+	padding-right: 		10px;
+	position:			absolute;
+	right:				0;
 }
