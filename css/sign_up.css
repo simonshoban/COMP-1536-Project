@@ -1,30 +1,32 @@
 main {
-	margin: 		0px;
+	margin: 0px;
 }
 h1 {
-	text-align: 	center;
-	width: 			100%;
-	font-size: 		2.6em;
+	text-align: center;
+	width: 100%;
+	font-size: 2.6em;
 }
 .sign_up {
-	display:		flex;
-	align-items:	center;
-	flex-flow:		column;
+	display:flex;
+	align-items:center;
+	flex-flow:column;
+}
+.text_boxes label{
+		min-width: 150px;
 }
 .sign_up label{
-	display:		inline-block;
-	min-width: 		150px;
-	text-align:		right;
+	display:inline-block;
+	text-align:right;
 }
 .sign_up input{
-	margin: 		20px 3px;
+	margin: 20px 3px;
 }
 #terms_box {
 }
 #terms_label {
-	text-align:		left;
+	text-align:left;
 }
 #submit {
-	width:			70px;
+	width:70px;
 }
 

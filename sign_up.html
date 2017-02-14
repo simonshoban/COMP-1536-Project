@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="css/responsive_base_test.css">
-		<link rel="stylesheet" href="sign_up.css">
+		<link rel="stylesheet" href="css/sign_up.css">
 		<title>Sign Up</title>
 	</head>
 	<body>
@@ -51,41 +51,42 @@
 		<Main>
 			<h1>Sign Up</h1>
 			
-				<form class="sign_up" method="post">
-				<div>
-					<label for="username">Username</label>
-					<input type="text" name="username" placeholder="Username">
-					
+				<form class="sign_up" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+				<div class="text_boxes">
+					<div>
+						<label for="username">Username</label>
+						<input type="text" name="username" id="username" placeholder="Username">
+						
+					</div>
+					<div>
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" placeholder="Email">
+					</div>
+					<div>
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password">
+					</div>
+					<div>
+						<label for="password_confirm">Confirm Password</label>
+						<input type="password" name="password_confirm" id="confirm_password">
+					</div>
 				</div>
-				<div>
-					<label for="email">Email</label>
-					<input type="email" name="email" placeholder="Email">
-				</div>
-				<div>
-					<label for="password">Password</label>
-					<input type="password" name="password">
-				</div>
-				<div>
-					<label for="password_confirm">Confirm Password</label>
-					<input type="password" name="password_confirm">
-				</div>
-				<div>
-					<label for="gender">Gender</label>
-					<input type="radio" name="gender" value="male"> Male
-					<input type="radio" name="gender" value="female"> Female
-					<input type="radio" name="gender" value="other"> Other
-				</div>
-				<div>
-					<label for="date">Date of Birth</label>
-					<input type="date" name="birthday" placeholder="yyyy-mm-dd">
-				</div>
-				<div>
-					<input id="terms_box"} type="checkbox" name="terms_agree">
-					<label id="terms_label" for="terms_agree">Agree to Terms and Conditions</label>
-				</div>
-				<div>
-					<input id="submit" type="submit" value="Sign Up">
-				</div>
+					<div>
+						<input type="radio" name="gender" value="male" id="male"> <label for="male"> Male </label>
+						<input type="radio" name="gender" value="female"id="female"> <label for="female"> Female </label>
+						<input type="radio" name="gender" value="other" id="other"> <label for="other"> Other </label>
+					</div>
+					<div>
+						<label for="dateOfBirth">Date of Birth</label>
+						<input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="yyyy-mm-dd">
+					</div>
+					<div>
+						<input id="terms_box" type="checkbox" name="terms_agree">
+						<label id="terms_label" for="terms_box">Agree to Terms and Conditions</label>
+					</div>
+					<div>
+						<input id="submit" type="submit" value="Sign Up">
+					</div>
 				</form>
 		</main>
 		<footer>
