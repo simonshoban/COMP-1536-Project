@@ -1,131 +1,134 @@
 body{
-	position:relative;
+	position:			relative;
 	
 }
 .page{
-	padding-bottom:50px;
+	padding-bottom:		50px;
 }
 
 #main_article{
-	margin-bottom:20px;
-	position:relative;
+	margin-bottom:		20px;
+	position:			relative;
 }
 #main_article h1{
-	position:absolute;
-	bottom:40px;
-	left:20px;
-	margin:0;
+	position:			absolute;
+	bottom:				40px;
+	left:				20px;
+	margin:				0;
 	text-shadow:
-    -2px -2px 0 #0066dd,
-    2px -2px 0 #0066dd,
-    -2px 2px 0 #0066dd,
-    2px 2px 0 #0066dd;
+						-2px -2px 0 #0066dd,
+						2px -2px 0 #0066dd,
+						-2px 2px 0 #0066dd,
+						2px 2px 0 #0066dd;
 }
 #main_article a{
-	color:white;
+	color:				white;
 }
 #main_article a:hover{
-	color:yellow;
+	color:				yellow;
 }
 #main_content{
-	margin:0;
-	margin-left:10px;
-	padding:0;
-	float:left;
-	border:solid;
-	width:70%;
-	border-width:4px;
-	border-color:#0066dd;
+	margin:				0;
+	margin-left:		10px;
+	padding:			0;
+	float:				left;
+	border:				solid;
+	width:				70%;
+	border-width:		4px;
+	border-color:		#0066dd;
 }
 #main_content ul{	
-	margin:0;
-	padding:0;
-	list-style:none;
+	margin:				0;
+	padding:			0;
+	list-style:			none;
 }
 #main_content ul li{
-	clear:left;
-	border-top:solid;
+	clear:				left;
+	border-top:			solid;
 }
 #main_content ul li:first-of-type{
-	border-top:none;
+	border-top:			none;
 }
 #main_content ul li p{
-	margin:0;
-	margin-top:5px;
+	margin:				0;
+	margin-top:			5px;
 }
 #main_content ul li a img{
-	float:left;
-	width:300px;
-	height:168px;
-	margin-right:10px;
+	float:				left;
+	width:				300px;
+	height:				168px;
+	margin-right:		10px;
 }
 				
 #main_content ul li a{
-	text-decoration:none;
-	font-weight:bold;
-	color: white;
-	font-size:1.8em;
+	text-decoration:	none;
+	font-weight:		bold;
+	color: 				white;
+	font-size:			1.8em;
 	text-shadow:
-    -2px -2px 0 #0066dd,
-    2px -2px 0 #0066dd,
-    -2px 2px 0 #0066dd,
-    2px 2px 0 #0066dd;
+						-2px -2px 0 #0066dd,
+						2px -2px 0 #0066dd,
+						-2px 2px 0 #0066dd,
+						2px 2px 0 #0066dd;
 }
 #main_content ul li a:hover{
-	color:yellow;
+	color:				yellow;
 }
 #upcoming_titles{
-	margin:0;
-	padding:0;
-	float:left;
-	width:25%;
-	background-color:#8e8e8e;
-	margin-left: 20px;
+	margin:				0;
+	padding:			0;
+	float:				left;
+	width:				25%;
+	background-color:	#8e8e8e;
+	margin-left: 		20px;
 }
 #upcoming_titles h2{
-	text-align:center;
-	background-color: #0066dd;
-	margin:0;
-	padding:20px;
+	text-align:			center;
+	background-color: 	#0066dd;
+	margin:				0;
+	padding:			20px;
 }
 #upcoming_titles ol{
-	margin-left:20px;;
-	padding:0;
+	margin-left:		20px;
+	padding:			0;
 }
 #upcoming_titles ol li{
-	display:inline-block;
-	border: solid;
-	width:200px;
-	height:70px;
-	text-align:center;
-	padding-top:10px;
-	font-size:1.2em;
-	font-weight: bold;
+	display:			inline-block;
+	border: 			solid;
+	width:				200px;
+	height:				70px;
+	text-align:			center;
+	padding-top:		10px;
+	font-size:			1.2em;
+	font-weight: 		bold;
 }
 #upcoming_titles ol li a{
-	text-decoration:none;
-	color:white;
-	text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue;
+	text-decoration:	none;
+	color:				white;
+	text-shadow: 		-1px -1px 0 blue,
+						1px -1px 0 blue, 
+						-1px 1px 0 blue,
+						1px 1px 0 blue;
 }
 #upcoming_titles ol li a:hover{
-	color:yellow;
+	color:				yellow;
 }
 #first_title{
-	background-image: url(../images/index_images/fireemblem.png);
+	background-image: 	url(../images/index_images/fireemblem.png);
 }
 
 #second_title{
-	background-image: url(../images/index_images/mariorun.png);
+	background-image: 	url(../images/index_images/mariorun.png);
 }
 
 #third_title{
-	background-image: url(../images/index_images/summonerswar.png);
+	background-image: 	url(../images/index_images/summonerswar.png);
 }
 
 #fourth_title{
-	background-image: url(../images/index_images/goatsimulator.png);
+	background-image: 	url(../images/index_images/goatsimulator.png);
 }
 
 #fifth_title{
-	background-image: url(../images/index_images/ronic.png);
+	background-image: 	url(../images/index_images/ronic.png);
 }
