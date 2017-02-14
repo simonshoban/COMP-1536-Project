@@ -32,6 +32,12 @@ header {
 	z-index:			10;
 	background-color: 	#333333;
 }
+#slogan{
+	margin:0; 
+	position:absolute; 
+	left:200px;
+	top:20px;
+}
 #logo {
 	position:			absolute;
 	bottom: 			0px;
@@ -149,4 +155,6 @@ footer p {
 	padding-right: 		10px;
 	position:			absolute;
 	right:				0;
+	bottom:14px;
+	height:32px;
 }

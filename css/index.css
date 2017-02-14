@@ -3,13 +3,30 @@ body{
 	
 }
 .page{
-	padding-bottom:40px;
+	padding-bottom:50px;
 }
 
 #main_article{
 	margin-bottom:20px;
+	position:relative;
 }
-
+#main_article h1{
+	position:absolute;
+	bottom:40px;
+	left:20px;
+	margin:0;
+	text-shadow:
+    -2px -2px 0 #0066dd,
+    2px -2px 0 #0066dd,
+    -2px 2px 0 #0066dd,
+    2px 2px 0 #0066dd;
+}
+#main_article a{
+	color:white;
+}
+#main_article a:hover{
+	color:yellow;
+}
 #main_content{
 	margin:0;
 	margin-left:10px;
@@ -17,6 +34,8 @@ body{
 	float:left;
 	border:solid;
 	width:70%;
+	border-width:4px;
+	border-color:#0066dd;
 }
 #main_content ul{	
 	margin:0;
@@ -25,7 +44,14 @@ body{
 }
 #main_content ul li{
 	clear:left;
-	border-top:solid;	
+	border-top:solid;
+}
+#main_content ul li:first-of-type{
+	border-top:none;
+}
+#main_content ul li p{
+	margin:0;
+	margin-top:5px;
 }
 #main_content ul li a img{
 	float:left;
@@ -39,8 +65,15 @@ body{
 	font-weight:bold;
 	color: white;
 	font-size:1.8em;
+	text-shadow:
+    -2px -2px 0 #0066dd,
+    2px -2px 0 #0066dd,
+    -2px 2px 0 #0066dd,
+    2px 2px 0 #0066dd;
 }
-
+#main_content ul li a:hover{
+	color:yellow;
+}
 #upcoming_titles{
 	margin:0;
 	padding:0;
@@ -74,23 +107,25 @@ body{
 	color:white;
 	text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue;
 }
-
+#upcoming_titles ol li a:hover{
+	color:yellow;
+}
 #first_title{
-	background-image: url(https://miketendo64.files.wordpress.com/2017/02/my-fire.jpg?w=672&h=372&crop=1);
+	background-image: url(../images/index_images/fireemblem.png);
 }
 
 #second_title{
-	background-image: url(https://lh3.googleusercontent.com/ERlp5QdPfuJeiU0_O5knXjnyvsoraJ2vfR3AaORksQR5ml63zLtyPL-i_umCSudkng=w300);
+	background-image: url(../images/index_images/mariorun.png);
 }
 
 #third_title{
-	background-image: url(http://summonerswarskyarena.info/wp-content/uploads/2014/09/Summoners-War-Pic.jpg);
+	background-image: url(../images/index_images/summonerswar.png);
 }
 
 #fourth_title{
-	background-image: url(http://is5.mzstatic.com/image/thumb/Purple111/v4/90/4e/dc/904edc2d-4b47-81e2-2c70-d7e6f81a1a84/source/175x175bb.jpg);
+	background-image: url(../images/index_images/goatsimulator.png);
 }
 
 #fifth_title{
-	background-image: url(images/index_images/ronic.png);
+	background-image: url(../images/index_images/ronic.png);
 }
