@@ -1,9 +1,12 @@
 #review_main{
-	margin-left:50px;
-	margin-right:50px;
+	margin-left:5%;
+	margin-right:5%;
 }
 #review_img{
 	float:right;
+	width: 50%;
+	height:auto;
+	margin: 20px;
 }
 #comments{
 	list-style:none;
@@ -25,8 +28,14 @@
 	margin:0;
 }
 #comment_form{
-	width:500px;
+	width:80%;
+	position:relative;
+	padding-bottom:20px;
 	margin:auto;
+}
+#comment_submit {
+	position:absolute;
+	right:0;
 }
 #next_article{
 	color:white;
@@ -37,9 +46,41 @@
 	display: inline-block;
 	float:right;
 }
+#comment_section {
+	width: 100%;
+	height: 125px;
+}
+#comment_submit {
+	height:				26.5px;
+	border: 			none;
+	background-color: 	#555555;
+	color: 				#FFFFFF;
+	margin: 			0;
+	width: 				100px;
+	cursor: 			pointer;
+}
 #next_article{
 	
 }
 #clearer{
 	clear:both;
+}
+.hidden {
+	border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+@media screen and (max-width: 768px) {
+	#review_img {
+		float:none;
+		width:100%;
+		margin:0;
+	}
 }
