@@ -21,7 +21,12 @@ h1 {
 .sign_up input{
 	margin: 		20px 3px;
 }
-#terms_box {
+#date_of_birth_label{
+	display:		inline-block;
+	min-width:		150px;
+}
+#date_of_birth {
+	width: 			150px;
 }
 #terms_label {
 	text-align:		left;
