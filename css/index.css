@@ -1,11 +1,8 @@
 body{
 	position:			relative;
-	
-}
-.page{
 }
 nav ul li{
-	z-index:1;
+	z-index:			1;
 }
 #main_article{
 	margin-bottom:		20px;
@@ -13,9 +10,9 @@ nav ul li{
 
 }
 #main_article img {
-	width:100%;
-	height:auto;
-	max-width: 1000px;
+	width:				100%;
+	height:				auto;
+	max-width: 			1000px;
 }
 #main_article h1{
 	position:			absolute;
@@ -35,22 +32,22 @@ nav ul li{
 	color:				yellow;
 }
 #content {
-	display:flex;
-	flex-wrap:wrap;
-	align-items:center;
-	
+	display:			flex;
+	flex-wrap:			wrap;
+	align-items:		center;
 }
 #main_content{
 	margin-left:		10px;
 	margin-right:		10px;
-	margin-bottom:   20px;
+	margin-bottom:   	20px;
 	padding:			0;
+	flex:				3;
+	min-width: 			700px;	
 	border:				solid;
 	border-width:		4px;
 	border-color:		#0066dd;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	flex:3;
-	min-width: 700px;
+	box-shadow: 		0 4px 8px 0 rgba(0, 0, 0, 0.2),
+						0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #main_content ul {	
 	margin:				0;
@@ -59,8 +56,7 @@ nav ul li{
 }
 #main_content ul li{
 	border-top:			solid;
-	display:flex;
-	
+	display:			flex;
 }
 #main_content ul li:first-of-type{
 	border-top:			none;
@@ -68,15 +64,13 @@ nav ul li{
 .review_excerpt  p{
 	margin:				0;
 	margin-top:			5px;
-
 }
 .review_image{
 	width:				300px;
 	height:				168px;
 }
-				
 .review_excerpt h2{
-
+	margin:				5px;
 	font-weight:		bold;
 	font-size:			1.8em;
 	text-shadow:
@@ -84,7 +78,6 @@ nav ul li{
 						2px -2px 0 #0066dd,
 						-2px 2px 0 #0066dd,
 						2px 2px 0 #0066dd;
-	margin: 5px;
 }
 .review_excerpt a {
 	color: 				white;
@@ -97,11 +90,11 @@ nav ul li{
 	margin:				0 auto;
 	padding:			0;
 	background-color:	#8e8e8e;
-<<<<<<< HEAD
 	margin-left: 		20px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	flex:1;
-	max-width:240px;
+	flex:				1;
+	max-width:			240px;	
+	box-shadow: 		0 4px 8px 0 rgba(0, 0, 0, 0.2),
+						0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #upcoming_titles p{
 	margin:				0;
@@ -116,7 +109,7 @@ nav ul li{
 	
 	margin-left:		20px;
 	padding:			0;
-	width: 203px;
+	width: 				203px;
 }
 #upcoming_titles ol li{
 	display:			inline-block;
@@ -132,11 +125,12 @@ nav ul li{
 	display:			inline-block;
 	text-decoration:	none;
 	color:				white;
-	text-shadow: 		-1px -1px 0 black,
+	padding:			20px;
+	text-shadow: 		
+						-1px -1px 0 black,
 						1px -1px 0 black, 
 						-1px 1px 0 black,
 						1px 1px 0 black;
-	padding:			20px;
 }
 #upcoming_titles ol li a:hover{
 	color:				yellow;
@@ -163,29 +157,26 @@ nav ul li{
 
 @media screen and (min-width: 1000px) {
 	h1 {
-		font-size: 30px;
+		font-size: 		30px;
 	}
 }
 @media screen and (max-width: 1000px) {
 	h1 {
-		font-size: 3vw;
+		font-size: 		3vw;
 	}
 }
 @media screen and (max-width: 750px) {
-
 	#main_content {
-		min-width:calc(100% - 12px);
-		margin: 2px;
+		min-width:		calc(100% - 12px);
+		margin: 		2px;
 	}
 }
-
 @media screen and (max-width: 630px) {
 	.review_image {
-		display:none;
+		display:		none;
 	}
 	#main_content li{
 		padding-bottom: 10px;
-		padding-top: 10px;
+		padding-top: 	10px;
 	}
-
 }
