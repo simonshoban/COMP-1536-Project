@@ -1,0 +1,49 @@
+#review_main{
+	margin-left:50px;
+	margin-right:50px;
+}
+#review_side{
+	float:right;
+}
+#rating_buttons{
+	width: 100px;
+	margin:auto;
+}
+#comments{
+	list-style:none;
+	padding:0;
+	width:80%;
+	margin:auto;
+}
+#comments li{
+	border:solid;
+	margin-bottom: 10px;
+	padding:10px;
+}
+#comments h3{
+	color: #0066dd;
+	margin:0;
+}
+#comments li p{
+	text-indent: 2.0em;
+	margin:0;
+}
+#comment_form{
+	width:500px;
+	margin:auto;
+}
+#next_article{
+	color:white;
+	text-decoration:none;
+	background-color:#0066dd;
+	margin:20px 0px 20px 0px;
+	padding:10px;
+	display: inline-block;
+	float:right;
+}
+#next_article{
+	
+}
+#clearer{
+	clear:both;
+}
