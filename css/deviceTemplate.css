@@ -1,6 +1,6 @@
 .page{
 	padding-bottom: 	60px;
-}
+ }
 #slogan{
 	position:			absolute;
 	left:				200px;
@@ -12,9 +12,13 @@
  	border: 			4px solid #ccc;
  	padding: 			15px;
  }
- #article_body img, #content img{
+ #article_body img{
  	margin: 			15px;
  	border: 			6px solid #aaa; 
+ }
+#content img{
+	margin:				0 15px 15px 15px;
+	border:				6px solid #aaa;
  }
  #article_body{
  	padding-bottom: 	0;
@@ -67,6 +71,7 @@
 #content ul li{
 	clear:				left;
 	border-top:			solid;
+	padding-top: 		15px;
 }
 #content ul li a img{
 	float:				left;
