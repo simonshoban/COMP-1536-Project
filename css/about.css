@@ -4,21 +4,25 @@ main{
 	width: 80%;
 }
 
-#mainBlock{
+#main_block{
 	margin: inherit;
+	display: flex;
 }
 
-#aboutContent{
-	float: left;
+#about_content{
+	flex: 4;
 	display: inline block;
 	width: 60%;
-	border-right: thin white solid;
+	border-right: 2px white solid;
+	padding-right: 10px;
 }
 
-#contactInfo{
-	float: right;
+#contact_info{
+	flex: 3;
+	padding-left: 10px;
 }
 
 #clear{
 	clear: left;
 }
+
