@@ -1,0 +1,24 @@
+main{
+	margin-bottom: 20px;
+	margin: auto;
+	width: 80%;
+}
+
+#mainBlock{
+
+}
+
+#aboutContent{
+	float: left;
+	display: inline block;
+	width: 60%;
+	border-right: thin white solid;
+}
+
+#contactInfo{
+	float: right;
+}
+
+#clear{
+	clear: left;
+}
