@@ -13,7 +13,7 @@ body {
 }
 #banner {
 	position: 			absolute;
-	background-color: 	#333333;
+	background-color: 	#444444;
 	width: 				100%;
 	height: 			75px;
 }
@@ -164,17 +164,6 @@ footer p {
 	bottom:14px;
 	height:32px;
 }
-
-.hidden {
-	border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
 @media screen and (max-width: 960px) {
 	#slogan {
 		display:none;
@@ -187,8 +176,5 @@ footer p {
 	}
 	#search {
 		display: none;
-	}
-	nav ul li > a {
-		pointer-events:none;
 	}
 }
