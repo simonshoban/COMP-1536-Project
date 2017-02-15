@@ -2,12 +2,8 @@
 	margin-left:50px;
 	margin-right:50px;
 }
-#review_side{
+#review_img{
 	float:right;
-}
-#rating_buttons{
-	width: 100px;
-	margin:auto;
 }
 #comments{
 	list-style:none;
