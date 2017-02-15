@@ -23,7 +23,7 @@ body {
 	max-width: 			1000px;
 	margin: 			0px auto;
 	padding-bottom:		60px;
-	min-height:			100vh;
+	min-height:			calc(100vh - 60px);
 }
 header {
 	position: 			relative;
@@ -32,6 +32,12 @@ header {
 	padding: 			0px;
 	margin: 			0px;
 	z-index:			10;
+}
+#slogan{
+	margin:				0; 
+	position:			absolute; 
+	left:				200px;
+	top:				20px;
 }
 #logo {
 	position:			absolute;
@@ -135,9 +141,7 @@ nav ul li:hover .dropdown, .dropdown:hover{
 	margin-right: 		0px;
 }
 main {
-	padding-bottom:		60px;
-	margin-left:		5%;
-	margin-right:		5%;
+
 }
 footer {
 	width: 				100%;
@@ -159,6 +163,11 @@ footer p {
 	right:				0;
 	bottom:14px;
 	height:32px;
+}
+@media screen and (max-width: 960px) {
+	#slogan {
+		display:none;
+	}
 }
 
 @media screen and (max-width: 425px) {
