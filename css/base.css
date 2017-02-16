@@ -161,7 +161,7 @@ footer p { /*sets margin to center footer text horizontally*/
 	bottom:				14px;
 	height:				32px;
 }
-.hidden { /*a class for hidding accessibility elements from normal users*/
+.hidden { /*a class for hiding accessibility elements from normal users*/
  	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
