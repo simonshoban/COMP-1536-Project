@@ -1,6 +1,6 @@
 #review_main{
-	margin-left:5%;
-	margin-right:5%;
+	margin-left:		5%;
+	margin-right:		5%;
 }
 #review_main h1{
 	text-shadow:
@@ -10,33 +10,33 @@
 						2px 2px 0 #0044bb;
 }
 #article_info p{
-	margin:0;
+	margin:				0;
 }
 #review_img{
-	float:right;
-	/*width: 50%;*/
-	height:auto;
-	margin: 20px;
+	float:				right;
+	/*width: 			50%;*/
+	height:				auto;
+	margin: 			20px;
 }
 #comments{
-	list-style:none;
-	padding:0;
-	width:80%;
-	margin:auto;
+	list-style:			none;
+	padding:			0;
+	width:				80%;
+	margin:				auto;
 }
 #comments li{
-	border:solid;
-	margin-bottom: 10px;
-	padding:10px;
+	border:				solid;
+	margin-bottom: 		10px;
+	padding:			10px;
 }
 #comments h3{
-	color: #0066dd;
-	margin:0;
+	color: 				#0066dd;
+	margin:				0;
 	
 }
 #comments li p{
-	text-indent: 2.0em;
-	margin:0;
+	text-indent: 		2.0em;
+	margin:				0;
 }
 #comment_header{
 	text-shadow:
@@ -46,29 +46,29 @@
 						2px 2px 0 #0044bb;
 }
 #comment_form{
-	width:80%;
-	position:relative;
-	padding-bottom:20px;
-	margin:auto;
-	margin-top:40px;
-	margin-bottom:40px;
+	width:				80%;
+	position:			relative;
+	padding-bottom:		20px;
+	margin:				auto;
+	margin-top:			40px;
+	margin-bottom:		40px;
 }
 #comment_submit {
-	position:absolute;
-	right:0;
+	position:			absolute;
+	right:				0;
 }
 #next_article{
-	color:white;
-	text-decoration:none;
-	background-color:#0066dd;
-	margin:20px 0px 20px 0px;
-	padding:10px;
-	display: inline-block;
-	float:right;
+	color:				white;
+	text-decoration:	none;
+	background-color:	#0066dd;
+	margin:				20px 0px 20px 0px;
+	padding:			10px;
+	display: 			inline-block;
+	float:				right;
 }
 #comment_section {
-	width: 100%;
-	height: 125px;
+	width: 				100%;
+	height: 			125px;
 }
 #comment_submit {
 	height:				26.5px;
@@ -80,14 +80,14 @@
 	cursor: 			pointer;
 }
 #clearer{
-	clear:both;
+	clear:				both;
 }
 
 
 @media screen and (max-width: 768px) {
 	#review_img {
-		float:none;
-		width:100%;
-		margin:0;
+		float:			none;
+		width:			100%;
+		margin:			0;
 	}
 }

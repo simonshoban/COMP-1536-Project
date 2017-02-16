@@ -49,7 +49,7 @@ header {
 	right: 				0px;
 }
 #login br{
-	display:none;
+	display:			none;
 }
 #login a {
 	display:			inline-block;
@@ -140,9 +140,6 @@ nav ul li:hover .dropdown, .dropdown:hover{
 #about {
 	margin-right: 		0px;
 }
-main {
-
-}
 footer {
 	width: 				100%;
 	background-color: 	#222222;
@@ -151,7 +148,6 @@ footer {
 	bottom:				0px;
 	display:			flex;
 	align-items:		center; /*this selector doesn't look legit, notepad doesn't detect it*/
-
 }
 footer p {
 	margin: 			0px auto;
@@ -161,20 +157,19 @@ footer p {
 	padding-right: 		10px;
 	position:			absolute;
 	right:				0;
-	bottom:14px;
-	height:32px;
+	bottom:				14px;
+	height:				32px;
 }
 @media screen and (max-width: 960px) {
 	#slogan {
-		display:none;
+		display:		none;
 	}
 }
-
 @media screen and (max-width: 425px) {
 	#login br {
-		display:inline;
+		display:		inline;
 	}
 	#search {
-		display: none;
+		display: 		none;
 	}
 }
