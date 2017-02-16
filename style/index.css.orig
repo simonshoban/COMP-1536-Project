@@ -1,0 +1,225 @@
+body{
+	position:			relative;
+}
+nav ul li{
+	z-index:			1;
+}
+#main_article{
+	margin-bottom:		20px;
+	position:			relative;
+
+}
+#main_article img {
+	width:				100%;
+	height:				auto;
+	max-width: 			1000px;
+}
+#main_article h1{
+	position:			absolute;
+	bottom:				5%;
+	left:				2.5%;
+	margin:				0;
+	text-shadow:
+						-2px -2px 0 #0066dd,
+						2px -2px 0 #0066dd,
+						-2px 2px 0 #0066dd,
+						2px 2px 0 #0066dd;
+}
+#main_article a{
+	color:				white;
+}
+#main_article a:hover{
+	color:				yellow;
+}
+#content {
+	display:			flex;
+	flex-wrap:			wrap;
+	padding-right: 		10px;
+	padding-left: 		10px;
+	margin:				0;
+}
+#main_content{
+	margin-right:		10px;
+	margin-bottom:   	20px;
+	padding:			0;
+	flex:				3;
+<<<<<<< HEAD
+	width: 				700px;	
+	border:				solid;
+	border-width:		4px;
+	border-color:		#0066dd;
+=======
+	width: 			700px;	
+	border:				solid 4px #0066dd;
+	box-shadow: 		0 4px 8px 0 rgba(0, 0, 0, 0.2),
+>>>>>>> origin/alternate_device
+}
+#main_content ul {	
+	margin:				0;
+	padding:			0;
+	list-style:			none;
+}
+#main_content ul li{
+	border-top:			solid #eeeeee;
+	display:			flex;
+}
+#main_content ul li:first-of-type{
+	border-top:			none;
+}
+.review_excerpt{
+	position:relative;
+}
+.review_excerpt  p{
+	margin:				0;
+	margin-top:			5px;
+	margin-left:		5px;
+}
+.review_image{
+	border:				2px solid #333;
+	width:				300px;
+	height:				168px;
+	margin:				5px;
+}
+.review_excerpt h2{
+	margin:				10px 5px 5px 5px;
+	font-weight:		bold;
+	font-size:			1.7em;
+	text-shadow:
+						-2px -2px 0 #0044bb,
+						2px -2px 0 #0044bb,
+						-2px 2px 0 #0044bb,
+						2px 2px 0 #0044bb;
+}
+.review_excerpt a {
+	color: 				white;
+	text-decoration:	none;
+
+}
+.review_excerpt a:hover{
+	color:				yellow;
+
+}
+.review_excerpt .more{
+	position: absolute;
+	bottom:10px;
+	left :10px;
+	text-decoration:underline;
+ }
+ 
+.review_excerpt .more:link{
+	color:#aaa;
+}
+.review_excerpt .more:visited{
+	color:#aaa;
+}
+.review_excerpt .more:hover{
+ 	color: 				white;
+ } 
+#upcoming_titles{
+	margin:				0 auto;
+	padding:			0;
+	margin-left: 		10px;
+	flex:				1;
+	width:				240px;
+}
+#upcoming_titles p{
+	margin:				0;
+}
+#upcoming_titles h2{
+	text-align:			center;
+	background-color: 	#0066dd;
+	margin:				0;
+	padding:			20px;
+	width:				203px
+}
+#upcoming_titles ol{
+	
+	margin:				0px;
+	padding:			10px 20px 10px 20px;
+	width: 				203px;
+	background-color:	#8e8e8e;
+}
+#upcoming_titles ol li{
+	display:			inline-block;
+	list-style:			none;
+	border: 			solid;
+	width:				200px;
+	height:				70px;
+	text-align:			center;
+	font-size:			1.2em;
+	font-weight: 		bold;
+}
+#upcoming_titles ol li a{
+	display:			inline-block;
+	text-decoration:	none;
+	color:				white;
+	padding:			20px 20px 20px 20px;
+	text-shadow: 		
+						-1px -1px 0 black,
+						1px -1px 0 black, 
+						-1px 1px 0 black,
+						1px 1px 0 black;
+}
+#upcoming_titles ol li a:hover{
+	color:				yellow;
+}
+#first_title{
+	background-image: 	url(../images/index_images/fireemblem.png);
+}
+
+#second_title{
+	background-image: 	url(../images/index_images/mariorun.png);
+}
+
+#third_title{
+	background-image: 	url(../images/index_images/summonerswar.png);
+}
+
+#fourth_title{
+	background-image: 	url(../images/index_images/goatsimulator.png);
+}
+
+#fifth_title{
+	background-image: 	url(../images/index_images/ronic.png);
+}
+@media screen and (min-width: 1000px) {
+	h1 {
+		font-size: 		30px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	h1 {
+		font-size: 		3vw;
+	}
+}
+@media screen and (max-width: 960px) {
+	#upcoming_titles {
+		display:		none;
+		
+	}
+	#main_content {
+		margin-right: 	0;
+	}
+}
+@media screen and (max-width: 750px) {
+	#main_content {
+		min-width:		calc(100% - 12px);
+		margin: 		2px;
+	}
+}
+@media screen and (max-width: 630px) {
+	.review_image {
+		display:		none;
+	}
+	#main_content {
+		border-left:	none;
+		border-right:	none;
+	}
+	#main_content li{
+		padding-bottom: 10px;
+		padding-top: 	10px;
+	}
+	.review_excerpt {
+		padding-bottom: 35px;
+	}
+}
