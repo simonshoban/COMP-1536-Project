@@ -21,6 +21,13 @@ main{
 	flex: 				3;
 	padding-left: 		20px;
 }
+h1, h2{
+	text-shadow:
+						-2px -2px 0 #0066dd,
+						2px -2px 0 #0066dd,
+						-2px 2px 0 #0066dd,
+						2px 2px 0 #0066dd;
+}
 @media screen and (max-width: 790px) {
 	main {
 		margin-left: 	25px;
