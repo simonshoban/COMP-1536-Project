@@ -1,31 +1,31 @@
 html {
-	min-height:			100vh;
+	min-height:			100vh;	/*makes the html always at least the same size as viewport height
 	margin:				0;
-	overflow-y:			scroll;
+	overflow-y:			scroll; /*makes scroll bar always visible to prevent webpage shifting when switching pages*/
 }
 body {
-	background-color: 	#8E8E8E;
-	background: 		radial-gradient(circle, #006699, #24292B);
-	color: 				#FFFFFF;
-	margin: 			0px;
+	background-color: 	#8E8E8E; /* grey background incase gradient is not supported*/
+	background: 		radial-gradient(circle, #006699, #24292B); /*gradient going from blue to grey*/
+	color: 				#FFFFFF; /*sets color for all text in body to white*/
+	margin: 			0px;	
 	min-height:			100vh;
 	font-family: 		"MS Sans Serif";
 }
-#banner {
-	position: 			absolute;
-	background-color: 	#444444;
+#banner {	/*a banner at the top of the page that exists outside of .page*/
+	position: 			absolute;	
+	background-color: 	#444444;	
 	width: 				100%;
 	height: 			75px;
 }
-.page {
+.page {		/*a class to contain all page elemts*/
 	position:			relative;
-	background-color: 	#444444;
+	background-color: 	#444444; /*grey*/
 	max-width: 			1000px;
 	margin: 			0px auto;
 	padding-bottom:		60px;
-	min-height:			calc(100vh - 60px);
+	min-height:			calc(100vh - 60px); /*sets the minimum height to the viewport subtracting 60 to account for the absolutely positioned footer*/
 }
-header {
+header {	/*sets the position and size of the header. as well as giving it a zindex*/
 	position: 			relative;
 	max-width: 			100%;
 	height: 			75px;
@@ -33,28 +33,28 @@ header {
 	margin: 			0px;
 	z-index:			10;
 }
-#slogan{
+#slogan{	/*positions the slogan absolutely in the middle of the header*/
 	margin:				0; 
 	position:			absolute; 
 	left:				200px;
 	top:				20px;
 }
-#logo {
+#logo {		/*positions the logo absolutely in the bottom left of the header*/
 	position:			absolute;
 	bottom: 			0px;
 }
-#login {
+#login {	/*positions the login and signup buttons absolutely in the top left of the header*/
 	position:			absolute;
 	top: 				0px;
 	right: 				0px;
 }
-#login br{
+#login br{ /*a line break that is disabled on desktop view but enables when viewing on mobile*/
 	display:			none;
 }
-#login a {
+#login a { /*styles the login and sign up buttons look like buttons*/
 	display:			inline-block;
-	background-color:	#555555;
-	color: 				#FFFFFF;
+	background-color:	#555555; /*grey*/
+	color: 				#FFFFFF; /*white*/
 	width: 				100px;
 	padding: 			3px 0px;
 	text-decoration:	none;
@@ -62,126 +62,121 @@ header {
 	margin-left: 		2px;
 	margin-bottom:		2px;
 }
-#login a:hover {
-	background-color: 	#666666
+#login a:hover {	/*changes the login and sign up buttons to have a lighter background color when the mouse is over them*/
+	background-color: 	#666666 /*light grey*/
 }
-#search {
+#search { /*positions search button and form in the bottom right of the header*/
 	position:			absolute;
 	right: 				0px;
 	bottom: 			0px;
 	margin: 			0;
 }
-#search-field {
+#search-field {	/*sets padding for distance between button and field*/
 	padding:			5px 10px;
 	margin: 			0;
 }
-#search-button {
+#search-button { /*styles the search button the look similar to the login and sign up links*/
 	height:				26.5px;
 	border: 			none;
-	background-color: 	#555555;
-	color: 				#FFFFFF;
+	background-color: 	#555555; /*grey*/
+	color: 				#FFFFFF; /*white*/
 	margin: 			0;
 	width: 				100px;
-	cursor: 			pointer;
+	cursor: 			pointer; /*sets the cursor the mouse uses when hovering over the button*/
 }
 #search-button:hover{
-	background-color: 	#666666;
+	background-color: 	#666666; /*light grey*/
 }
-#mobile_nav {
-	display:none;
+nav {	/*sets the z-index of the nav bar so that it exists above all*/
+	z-index: 11
 }
-nav {
-	z-index: 11;
-}
-nav ul {
+nav ul { /*sets the unordered list to have no margin or padding and the background color that will appear between nav buttons*/
 	font-size: 			0;
 	margin: 			0;
 	padding: 			0;
-	background-color: 	#8E8E8E;
+	background-color: 	#8E8E8E; /*light grey*/
 	max-width: 			100%
 }
-nav ul li {
-	color: 				#FFFFFF;
-	font-size:			medium;
+nav ul li { /* makes the list items appear inline-block, centers the text within them, and makes the width always 19.88% of the page and margin always 0.15%*/
+	color: 				#FFFFFF; /*white*/
+	font-size:			medium; 
 	display: 			inline-block;
 	margin-right: 		0.15%;
 	text-align:			center;
 	position:			relative;
 	width:				19.88%
 }
-nav ul li a {
+nav ul li a { /*functions as nav links. sets font size larger than default, removes standard link styling and sets the background color*/
 	font-size: 			1.2em;
 	display: 			inline-block;
 	color: 				#FFFFFF;
 	text-decoration: 	none;
 	padding: 			10px 0px;
 	width:				100%;
-	background-color: 	#0066DD;
+	background-color: 	#0066DD; /*blue*/
 }
-nav ul li a:hover {
+nav ul li a:hover { /*changes the background color of nav bar links when hovered*/
 	background-color: 	#0099DD;
 }
-.dropdown {
+.dropdown { /*absolutely positions dropdowns in relation to list item. resets fron size from ul. z-index so it exists above page content*/
 	font-size:			medium;
 	display:			none;
 	position: 			absolute;
 	width:				100%;
 	left:				0px;
-	z-index:10;
+	z-index:			10;
 }
-.dropdown a {
+.dropdown a { /*styles the actual links on the dropdown with white background and black text and gives padding*/
 	display: 			inline-block;
-	color: 				#000000;
-	background-color:	#EEEEEE;
+	color: 				#000000; /*black*/
+	background-color:	#EEEEEE; /*white*/
 	text-decoration: 	none;
 	text-align: 		center;
 	padding: 			8px 0px 8px;
 	width: 				100%;
 }
-nav ul li:hover .dropdown, .dropdown:hover{
+nav ul li:hover .dropdown, .dropdown:hover{ /*makes the dropdown visible on hover of nav bar links or the dropdown itself*/
 	display: 			block;
 }
-#about {
+#about { /*removes the margin on the right of about nav bar link*/
 	margin-right: 		0px;
 }
-footer {
+footer { /*sets a fixed height for the footer and uses a flexbox to align the text inside vertically*/
 	width: 				100%;
 	background-color: 	#222222;
 	height: 			60px;
 	position:			absolute;
 	bottom:				0px;
 	display:			flex;
-	align-items:		center; /*this selector doesn't look legit, notepad doesn't detect it*/
+	align-items:		center;
 }
-footer p {
+footer p { /*sets margin to center footer text horizontally*/
 	margin: 			0px auto;
 	padding: 			10px;
 }
-#social_media {
+#social_media { /*absolutely positions social media icons in footer*/
 	padding-right: 		10px;
 	position:			absolute;
 	right:				0;
 	bottom:				14px;
 	height:				32px;
 }
-
-
- .hidden {
+.hidden { /*a class for hidding accessibility elements from normal users*/
  	border: 0;
-   clip: rect(0 0 0 0);
-   height: 1px;
-   margin: -1px;
-   overflow: hidden;
-   padding: 0;
-   position: absolute;
-   width: 1px;
- }
-@media screen and (max-width: 960px) {
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+@media screen and (max-width: 960px) { /*removes slogan when viewport width is less than or equal to 960 px*/
 	#slogan {
 		display:		none;
 	}
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 425px) { /*makes longin and signup verticle, and removes search bar when viewport width <= 425*/
 	#login br {
 		display:		inline;
 	}
