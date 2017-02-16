@@ -79,8 +79,25 @@
 	width: 				100px;
 	cursor: 			pointer;
 }
-#clearer{
+#clearer {
 	clear:				both;
+}
+	
+
+input:checked ~ .radio_off {
+	display:none;
+}
+input:checked ~ .radio_on {
+	display:inline;
+}
+
+input:not(checked) ~ .radio_on {
+	display:none;
+}
+input:not(checked) ~ .radio_off {
+	display:inline;
+}
+#gr8_image_off{
 }
 
 
