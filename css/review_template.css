@@ -2,6 +2,16 @@
 	margin-left:5%;
 	margin-right:5%;
 }
+#review_main h1{
+	text-shadow:
+						-2px -2px 0 #0044bb,
+						2px -2px 0 #0044bb,
+						-2px 2px 0 #0044bb,
+						2px 2px 0 #0044bb;
+}
+#article_info p{
+	margin:0;
+}
 #review_img{
 	float:right;
 	width: 50%;
@@ -22,16 +32,26 @@
 #comments h3{
 	color: #0066dd;
 	margin:0;
+	
 }
 #comments li p{
 	text-indent: 2.0em;
 	margin:0;
+}
+#comment_header{
+	text-shadow:
+						-2px -2px 0 #0044bb,
+						2px -2px 0 #0044bb,
+						-2px 2px 0 #0044bb,
+						2px 2px 0 #0044bb;
 }
 #comment_form{
 	width:80%;
 	position:relative;
 	padding-bottom:20px;
 	margin:auto;
+	margin-top:40px;
+	margin-bottom:40px;
 }
 #comment_submit {
 	position:absolute;
@@ -58,9 +78,6 @@
 	margin: 			0;
 	width: 				100px;
 	cursor: 			pointer;
-}
-#next_article{
-	
 }
 #clearer{
 	clear:both;
