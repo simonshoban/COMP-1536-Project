@@ -90,6 +90,9 @@ header {
 #mobile_nav {
 	display:none;
 }
+nav {
+	z-index: 11;
+}
 nav ul {
 	font-size: 			0;
 	margin: 			0;
@@ -124,6 +127,7 @@ nav ul li a:hover {
 	position: 			absolute;
 	width:				100%;
 	left:				0px;
+	z-index:10;
 }
 .dropdown a {
 	display: 			inline-block;

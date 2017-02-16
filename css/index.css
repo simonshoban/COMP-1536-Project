@@ -34,9 +34,9 @@ nav ul li{
 #content {
 	display:			flex;
 	flex-wrap:			wrap;
-	padding-right: 		10px;
-	padding-left: 		10px;
-	margin:				0;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin:0;
 }
 #main_content{
 	margin-right:		10px;
@@ -44,9 +44,7 @@ nav ul li{
 	padding:			0;
 	flex:				3;
 	width: 				700px;	
-	border:				solid;
-	border-width:		4px;
-	border-color:		#0066dd;
+	border:				solid 4px #0066dd;
 }
 #main_content ul {	
 	margin:				0;
@@ -59,6 +57,9 @@ nav ul li{
 }
 #main_content ul li:first-of-type{
 	border-top:			none;
+}
+.review_excerpt{
+	position:relative;
 }
 .review_excerpt  p{
 	margin:				0;
@@ -84,10 +85,28 @@ nav ul li{
 .review_excerpt a {
 	color: 				white;
 	text-decoration:	none;
+
 }
 .review_excerpt a:hover{
 	color:				yellow;
+
 }
+.review_excerpt .more{
+	position: absolute;
+	bottom:10px;
+	left :10px;
+	text-decoration:underline;
+ }
+ 
+.review_excerpt .more:link{
+	color:#aaa;
+}
+.review_excerpt .more:visited{
+	color:#aaa;
+}
+.review_excerpt .more:hover{
+ 	color: 				white;
+ } 
 #upcoming_titles{
 	margin:				0 auto;
 	padding:			0;
@@ -191,5 +210,8 @@ nav ul li{
 	#main_content li{
 		padding-bottom: 10px;
 		padding-top: 	10px;
+	}
+	.review_excerpt {
+		padding-bottom: 35px;
 	}
 }
