@@ -44,9 +44,7 @@ nav ul li{
 	padding:			0;
 	flex:				3;
 	width: 			700px;	
-	border:				solid;
-	border-width:		4px;
-	border-color:		#0066dd;
+	border:				solid 4px #0066dd;
 	box-shadow: 		0 4px 8px 0 rgba(0, 0, 0, 0.2),
 }
 #main_content ul {	
@@ -95,12 +93,18 @@ nav ul li{
 
 }
 .review_excerpt .more{
- 	color: 				#aaa;
 	position: absolute;
 	bottom:10px;
 	left :10px;
 	text-decoration:underline;
  }
+ 
+.review_excerpt .more:link{
+	color:#aaa;
+}
+.review_excerpt .more:visited{
+	color:#aaa;
+}
 .review_excerpt .more:hover{
  	color: 				white;
  } 

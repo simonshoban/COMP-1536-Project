@@ -53,20 +53,24 @@
 }
 
 #main_article .more {
-	color: 				#aaa;
 	position: absolute;
 	bottom:10px;
 	left :570px;
 	text-decoration:underline;
 }
 .review_excerpt .more{
- 	color: 				#aaa;
 	position: absolute;
 	bottom:10px;
 	left :10px;
 	text-decoration:underline;
  }
-.review_excerpt .more:hover{
+.review_excerpt .more:link, #main_article .more:link{
+	color:#aaa;
+}
+.review_excerpt .more:visited, #main_article .more:visited{
+	color:#aaa;
+}
+.review_excerpt .more:hover, #main_article .more:hover{
  	color: 				white;
  } 
  #device_type{
