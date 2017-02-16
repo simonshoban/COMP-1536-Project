@@ -40,6 +40,7 @@
  }
  #main_article div{
 	 padding-bottom: 35px;
+	 padding-top: 10px;
 
  }
  #main_article p {
@@ -146,7 +147,6 @@
 		margin:0px;
 		border-left:0;
 		border-right:0;
-		margin-bottom: 5px;
 	}
 	#main_article .more 
 	{
