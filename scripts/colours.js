@@ -21,6 +21,7 @@ function callEveryHour() {
 }
 
 function changeColour() {
+	date = new Date();							//Gets the current date again in case the old one is no longer correct.
 	var hours = date.getHours();
 	var timeColour = "#112244";					//Night colour (8PM - 5AM)
 	
