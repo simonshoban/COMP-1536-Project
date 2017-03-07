@@ -1,10 +1,4 @@
 var date = new Date();							//Creates a variable that stores the current date (hours, minutes, seconds, etc..).
-var red;
-var green;
-var blue;
-var hours;
-var multiplier;
-var timeColour;
 
 setTimeout(changeColour, 1);					//Invokes the changeColour() function after 1 millisecond.
 
@@ -27,19 +21,20 @@ function callEveryHour() {
 }
 
 function changeColour() {
-	hours = new Date().getHours();
-
+	var hours = new Date().getHours();			//Gets the hour every time the function is called.
+	var timeColour;
+	
+	var red = 0;								//If it's before noon, the colours will go from dark blue to light blue.
+	var green = 36;
+	var blue = 72;
+	var multiplier = 1;
+	
 	if (hours >= 12) {							//If it's past noon, the colours will go from light blue to dark blue.
 		multiplier = -1;
 		red = 96;
 		green = 180;
 		blue = 255;
 		hours -= 12;
-	} else {									//If it's before noon, the colours will go from dark blue to light blue.
-		multiplier = 1;
-		red = 0;
-		green = 36;
-		blue = 72;
 	}
 	
 	red += multiplier * 8 * (hours);			//Tricky math stuffs
