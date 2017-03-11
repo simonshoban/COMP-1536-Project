@@ -44,5 +44,5 @@ function changeColour() {
 	timeColour = "rgb(" + red + ", " + green + ", " + blue + ")";	
 	//alert("timeColour: " + timeColour);
 	
-	document.getElementsByTagName("body")[0].style.background = "radial-gradient(circle), " + timeColour + ", rgb(36, 41, 34))";	//Sets the background of <body> to timeColour.
+	document.getElementsByTagName("body")[0].style.background = "radial-gradient(circle, " + timeColour + ", rgb(36, 41, 34))";	//Sets the background of <body> to timeColour.
 }
