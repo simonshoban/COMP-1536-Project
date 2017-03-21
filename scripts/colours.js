@@ -12,12 +12,13 @@ if (date.getMinutes() == 0) {
 	nextHour.setSeconds(0);						//
 	
 	difference = nextHour - new Date();			//Calculates the difference between the next hour and the current time.
-	
-	setTimeout(callEveryHour(), difference);	//Invokes callEveryHour() at the next hour.
+
+	setTimeout(callEveryHour, difference);		//Invokes callEveryHour() at the next hour.
 }
 
 function callEveryHour() {
-	setInterval(changeColour(), 3600000);		//Invokes changeColour() every hour (3,600,000 milliseconds).
+	changeColour();								//Calls changeColour() at the hour.
+	setInterval(changeColour, 3600000);			//Invokes changeColour() every hour (3,600,000 milliseconds).
 }
 
 function changeColour() {
@@ -28,6 +29,7 @@ function changeColour() {
 	var green = 36;
 	var blue = 72;
 	var multiplier = 1;
+	var manualEdit = 0;
 	
 	if (hours >= 12) {							//If it's past noon, the colours will go from light blue to dark blue.
 		multiplier = -1;
@@ -37,12 +39,11 @@ function changeColour() {
 		hours -= 12;
 	}
 	
-	red += multiplier * 8 * (hours);			//Tricky math stuffs
-	green += multiplier * 12 * (hours);
-	blue += multiplier * 15 * (hours);
+	red += multiplier * hours * 8;				//
+	green += multiplier * hours * 12;			//Changes the colour values based on the time.
+	blue += multiplier * hours * 15;			//
 	
-	timeColour = "rgb(" + red + ", " + green + ", " + blue + ")";	
-	//alert("timeColour: " + timeColour);
+	timeColour = "rgb(" + red + ", " + green + ", " + blue + ")";
 	
 	document.getElementsByTagName("body")[0].style.background = "radial-gradient(circle, " + timeColour + ", rgb(36, 41, 34))";	//Sets the background of <body> to timeColour.
 }
