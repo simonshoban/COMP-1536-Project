@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link rel="stylesheet" href="style/base.css">
-		<link rel="stylesheet" href="sign_up.css">
-		<link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
-		<title>Sign Up</title>
-
-		
-	</head>
-
-	<body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="style/base.css">
+	<link rel="stylesheet" href="style/sign_up.css">
+	<link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
+	<script src = "scripts/colours.js"></script>
+	<title>Log In</title>
+</head>
+<body>
 	<span id="banner">
 	</span>
 	<div class="page">
@@ -26,7 +23,6 @@
 				<label class="hidden" for="search-field">search field</label>
 				<input id="search-field" type="text"><input id="search-button" type="submit" Value="Search">
 			</form>
-			
 		</header>
 		<nav>
 			<ul>
@@ -53,37 +49,31 @@
 				<li id="about"><a href="about.html">About</a></li>
 			</ul>
 		</nav>
-		<Main>
+		<main>
 			<h2>Login</h2>
-			
 				<form class="sign_up" method="post" action="#" onSubmit="return validate(this);" name="form">
 				<div class="text_boxes">
 					<div>
 						<label for="username">Username</label>
-						<input type="text" name="username" id="username" placeholder="Username">
-						
+						<input type="text" name="username" id="username" placeholder="Username">		
 					</div>
 					<div>
 						<label for="password">Password</label>
-						<input type="password" name="password" id="password">
-						
+						<input type="password" name="password" id="password">		
 					</div>
 				</div>
-					<input id="submit" type="submit" value="Login" onClick="myFunction()">
-				
+					<input id="submit" type="submit" value="Login" onClick="myFunction()">			
 			</form>
 			<div id="accordion">
-	<h3>First</h3>
-	<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-	<h3>Second</h3>
-	<div>Phasellus mattis tincidunt nibh.</div>
-	<h3>Third</h3>
-	<div>Nam dui erat, auctor a, dignissim quis.</div>
-</div>
-
+				<h3>First</h3>
+				<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+				<h3>Second</h3>
+				<div>Phasellus mattis tincidunt nibh.</div>
+				<h3>Third</h3>
+				<div>Nam dui erat, auctor a, dignissim quis.</div>
+			</div>
 		</main>
 		<footer>
-		
 			<p>Copyright &copy; 2017</p>
 			<span id="social_media">
 			<!--icons from https://www.iconfinder.com/Io9mkt-->
@@ -97,39 +87,15 @@
 	<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 	<script>
 	$( "#accordion" ).accordion();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Hover states on the static widgets
-$( "#dialog-link, #icons li" ).hover(
-	function() {
-		$( this ).addClass( "ui-state-hover" );
-	},
-	function() {
-		$( this ).removeClass( "ui-state-hover" );
-	}
-);
-</script>
-	</body>
+	// Hover states on the static widgets
+	$( "#dialog-link, #icons li" ).hover(
+		function() {
+			$( this ).addClass( "ui-state-hover" );
+		},
+		function() {
+			$( this ).removeClass( "ui-state-hover" );
+		}
+	);
+	</script>
+</body>
 </html>
