@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="style/base.css">
 		<link rel="stylesheet" href="sign_up.css">
+		<link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
 		<title>Sign Up</title>
 
 		
@@ -71,6 +72,15 @@
 					<input id="submit" type="submit" value="Login" onClick="myFunction()">
 				
 			</form>
+			<div id="accordion">
+	<h3>First</h3>
+	<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+	<h3>Second</h3>
+	<div>Phasellus mattis tincidunt nibh.</div>
+	<h3>Third</h3>
+	<div>Nam dui erat, auctor a, dignissim quis.</div>
+</div>
+
 		</main>
 		<footer>
 		
@@ -82,6 +92,44 @@
 				<a href=""><img src="images/social_media/youtube.png" alt="youtube"></a>
 			</span>
 		</footer>
-	</div>
+	</div>	
+	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<script>
+	$( "#accordion" ).accordion();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
 	</body>
 </html>
