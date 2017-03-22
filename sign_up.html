@@ -1,15 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="style/base.css">
-	<link rel="stylesheet" href="style/sign_up.css">
-	<script src = "scripts/colours.js"></script>
-	<title>Sign Up</title>
-</head>
-<body>
-	<span id="banner"></span>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="style/base.css">
+		<link rel="stylesheet" href="sign_up.css">
+		<title>Sign Up</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			$('form').validate();
+			})
+		</script>
+	</head>
+
+	<body>
+	<span id="banner">
+	</span>
+	<script type="text/javascript">
+
+var ck_email = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+var ck_username = /^[A-Za-z0-9_]{5,20}$/;
+var ck_password =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$*%^&-]).{5,20}$/;
+var ck_dateofbirth = /[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/;
+
+
+function validate(form){
+
+	var email = form.email.value;
+	var username = form.username.value;
+	var password = form.password.value;
+	var gender = form.gender.value;
+	var dateofbirth = form.dateOfBirth.value;
+	var errors = [];
+
+	if (!ck_email.test(email)) {
+		errors[errors.length] = "You must enter a valid email address.";
+		document.getElementById('valid_email').style.display = 'block';
+		document.getElementById('invalid_email').style.display = 'inline';
+	}
+	else{
+		document.getElementById('valid_email').style.display = 'none';
+		document.getElementById('invalid_email').style.display = 'none';
+	}
+	
+	if (!ck_dateofbirth.test(dateofbirth)) {
+		errors[errors.length] = "You must enter a valid date of birth.";
+		document.getElementById('valid_dob').style.display = 'block';
+		document.getElementById('invalid_dob').style.display = 'inline';
+	}
+	else{
+		document.getElementById('valid_dob').style.display = 'none';
+		document.getElementById('invalid_dob').style.display = 'none';
+	}
+	
+	if (!ck_username.test(username)) {
+		errors[errors.length] = "Your username must be at least 5 characters long and contains no special characters.";
+		document.getElementById('valid_user').style.display = 'block';
+		document.getElementById('invalid_user').style.display = 'inline';
+	}
+	else{
+		document.getElementById('valid_user').style.display = 'none';
+		document.getElementById('invalid_user').style.display = 'none';
+	}
+
+	if (!ck_password.test(password)) {
+		errors[errors.length] = "You must enter a valid Password ";
+		document.getElementById('valid_password').style.display = 'block';
+		document.getElementById('invalid_password').style.display = 'inline';
+	}
+	else{
+		document.getElementById('valid_password').style.display = 'none';
+		document.getElementById('invalid_password').style.display = 'none';
+	}
+
+	if (gender==0) {
+		errors[errors.length] = "Select Gender";
+		document.getElementById('valid_gender').style.display = 'block';
+		document.getElementById('invalid_gender').style.display = 'inline';
+	}
+	else{
+		document.getElementById('valid_gender').style.display = 'none';
+		document.getElementById('invalid_gender').style.display = 'none';
+	}
+	
+	if(!document.getElementById('terms_agree').checked){
+		errors[errors.length] = "Agree to ToS";
+		document.getElementById('valid_tos').style.display = 'block';
+		document.getElementById('invalid_tos').style.display = 'inline';
+	}
+	else{
+		document.getElementById('valid_tos').style.display = 'none'
+		document.getElementById('invalid_tos').style.display = 'none';
+	}
+	
+	if(document.getElementById('password').value != document.getElementById('confirm_password').value){
+		errors[errors.length] = "Please make sure you entered the same passwords";
+		document.getElementById('valid_confirm').style.display = 'block';
+		document.getElementById('invalid_confirm').style.display = 'inline';
+	}
+	else{
+		document.getElementById('valid_confirm').style.display = 'none';
+		document.getElementById('invalid_confirm').style.display = 'none';
+	}
+	 
+	if (errors.length > 0) {
+		reportErrors(errors);
+		return false;
+	}
+	return true;
+	}
+
+	function reportErrors(errors){
+	var msg = "Please Enter Valide Data...\n";
+	for (var i = 0; i<errors.length; i++) {
+		var numError = i + 1;
+		msg += "\n" + numError + ". " + errors[i];
+	}
+	//alert(msg);
+}
+
+</script>
 	<div class="page">
 		<header>
 			<a href="index.html"><img id="logo" src="images/GR8.png" alt="GR8"></a>
@@ -21,6 +134,7 @@
 				<label class="hidden" for="search-field">search field</label>
 				<input id="search-field" type="text"><input id="search-button" type="submit" Value="Search">
 			</form>
+			
 		</header>
 		<nav>
 			<ul>
@@ -47,47 +161,61 @@
 				<li id="about"><a href="about.html">About</a></li>
 			</ul>
 		</nav>
-		<main>
+		<Main>
 			<h2>Sign Up</h2>
-				<form class="sign_up" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+			
+				<form class="sign_up" method="post" action="#" onSubmit="return validate(this);" name="form">
 				<div class="text_boxes">
 					<div>
-						<label for="username">Username</label>
+						<label for="username">Username<span id="invalid_user">*</span></label>
 						<input type="text" name="username" id="username" placeholder="Username">
 						
 					</div>
+					<span id = "valid_user"> Username must be between 5 and 20 characters and contain only letters and numbers</span>
+
 					<div>
-						<label for="email">Email</label>
+						<label for="email">Email<span id="invalid_email">*</span></label>
 						<input type="email" name="email" id="email" placeholder="Email">
+						
 					</div>
+					<span id = "valid_email"> Please enter a valid Email</span>
 					<div>
-						<label for="password">Password</label>
+						<label for="password">Password<span id="invalid_password">*</span></label>
 						<input type="password" name="password" id="password">
+						
 					</div>
+					<span id = "valid_password"> Passwords must contain an uppercase letter, lowercase letter, a number, a symbol, and must be at least 5 characters long.</span>
 					<div>
-						<label for="confirm_password">Confirm Password</label>
-						<input type="password" name="password_confirm" id="confirm_password">
+						<label for="confirm_password">Confirm Password<span id="invalid_confirm">*</span></label>
+						<input type="password" name="password_confirm" name="confirm_password" id="confirm_password">
+						
 					</div>
+					<span id = "valid_confirm"> Passwords don't match</span>
 				</div>
 				<div>
 					<input type="radio" name="gender" value="male" id="male"> <label for="male"> Male </label>
 					<input type="radio" name="gender" value="female"id="female"> <label for="female"> Female </label>
-					<input type="radio" name="gender" value="other" id="other"> <label for="other"> Other </label>
+					<input type="radio" name="gender" value="other" id="other"> <label for="other"> Other<span id="invalid_gender">*</span></label>
+					
 				</div>
+				<span id = "valid_gender"> Please select a gender</span>
 				<div>
-					<label for="dateOfBirth" id="date_of_birth_label">Date of Birth</label>
+					<label for="dateOfBirth" id="date_of_birth_label">Date of Birth<span id="invalid_dob">*</span></label>
 					<input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="yyyy-mm-dd">
 				</div>
+				<span id = "valid_dob"> Please enter a valid birth date</span>
 				<div>
-					<input id="terms_box" type="checkbox" name="terms_agree">
-					<label id="terms_label" for="terms_box">Agree to Terms and Conditions</label>
+					<input id="terms_agree" type="checkbox" name="terms_agree">
+					<label id="terms_label" for="terms_box">Agree to Terms and Conditions<span id="invalid_tos">*</span></label>
 				</div>
+				<span id = "valid_tos"> Please agree to the terms and conditions</span>
 				<div>
-					<input id="submit" type="submit" value="Sign Up">
+					<input id="submit" type="submit" value="Sign Up" onClick="myFunction()">
 				</div>
 			</form>
 		</main>
 		<footer>
+		
 			<p>Copyright &copy; 2017</p>
 			<span id="social_media">
 			<!--icons from https://www.iconfinder.com/Io9mkt-->
@@ -97,5 +225,5 @@
 			</span>
 		</footer>
 	</div>
-</body>
+	</body>
 </html>
