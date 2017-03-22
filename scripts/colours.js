@@ -7,30 +7,43 @@ if (date.getMinutes() == 0) {
 } else {
 	var nextHour = new Date();
 	
-	nextHour.setHour(date.getHours() + 1);		//
+	nextHour.setHours(date.getHours() + 1);		//
 	nextHour.setMinutes(0);						//Sets nextHour to the next hour (ex: 15:36 becomes 16:00).
 	nextHour.setSeconds(0);						//
 	
 	difference = nextHour - new Date();			//Calculates the difference between the next hour and the current time.
-	
-	setTimeout(callEveryHour(), difference);	//Invokes callEveryHour() at the next hour.
+
+	setTimeout(callEveryHour, difference);		//Invokes callEveryHour() at the next hour.
 }
 
 function callEveryHour() {
-	setInterval(changeColour(), 3600000);		//Invokes changeColour() every hour (3,600,000 milliseconds).
+	changeColour();								//Calls changeColour() at the hour.
+	setInterval(changeColour, 3600000);			//Invokes changeColour() every hour (3,600,000 milliseconds).
 }
 
 function changeColour() {
-	var hours = date.getHours();
-	var timeColour = "#112244";					//Night colour (8PM - 5AM)
+	var hours = new Date().getHours();			//Gets the hour every time the function is called.
+	var timeColour;
 	
-	if (hours >= 5 && hours < 10) {
-		timeColour = "#006699";					//Morning colour (5AM - 10AM)
-	} else if (hours < 18) {
-		timeColour = "#77DD99";					//Midday colour (10AM - 6PM)
-	} else if (hours < 20) {
-		timeColour = "#993333";					//Evening colour (6PM - 8PM)
+	var red = 0;								//If it's before noon, the colours will go from dark blue to light blue.
+	var green = 36;
+	var blue = 72;
+	var multiplier = 1;
+	var manualEdit = 0;
+	
+	if (hours >= 12) {							//If it's past noon, the colours will go from light blue to dark blue.
+		multiplier = -1;
+		red = 96;
+		green = 180;
+		blue = 255;
+		hours -= 12;
 	}
 	
-	document.getElementsByTagName("body")[0].style.background = "radial-gradient(circle, " + timeColour + ", #24292B)";	//Sets the background of <body> to timeColour.
+	red += multiplier * hours * 8;				//
+	green += multiplier * hours * 12;			//Changes the colour values based on the time.
+	blue += multiplier * hours * 15;			//
+	
+	timeColour = "rgb(" + red + ", " + green + ", " + blue + ")";
+	
+	document.getElementsByTagName("body")[0].style.background = "radial-gradient(circle, " + timeColour + ", rgb(36, 41, 34))";	//Sets the background of <body> to timeColour.
 }
