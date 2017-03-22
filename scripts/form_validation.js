@@ -7,7 +7,7 @@ function validate(form){
 	var email = form.email.value;
 	var username = form.username.value;
 	var password = form.password.value;
-	var gender = form.gender.value;
+	var gender = document.getElementsByName("gender");
 	var dateofbirth = form.dateOfBirth.value;
 	var errors = [];
 
@@ -51,7 +51,7 @@ function validate(form){
 		document.getElementById('invalid_password').style.display = 'none';
 	}
 
-	if (gender==0) {
+	if (!gender[0].checked && !gender[1].checked && !gender[2].checked) {
 		errors[errors.length] = "Select Gender";
 		document.getElementById('valid_gender').style.display = 'block';
 		document.getElementById('invalid_gender').style.display = 'inline';
@@ -92,7 +92,7 @@ function validate(form){
 	function reportErrors(errors){
 		var msg = "Please Enter Valide Data...\n";
 		
-		for (var i = 0; i<errors.length; i++) {
+		for (var i = 0; i < errors.length; i++) {
 			var numError = i + 1;
 			msg += "\n" + numError + ". " + errors[i];
 		}
