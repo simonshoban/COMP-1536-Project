@@ -20,7 +20,7 @@ function validate(form){
 		document.getElementById('valid_email').style.display = 'none';
 		document.getElementById('invalid_email').style.display = 'none';
 	}
-	
+
 	if (!ck_dateofbirth.test(dateofbirth)) {
 		errors[errors.length] = "You must enter a valid date of birth.";
 		document.getElementById('valid_dob').style.display = 'block';
@@ -30,7 +30,7 @@ function validate(form){
 		document.getElementById('valid_dob').style.display = 'none';
 		document.getElementById('invalid_dob').style.display = 'none';
 	}
-	
+
 	if (!ck_username.test(username)) {
 		errors[errors.length] = "Your username must be at least 5 characters long and contains no special characters.";
 		document.getElementById('valid_user').style.display = 'block';
@@ -60,7 +60,7 @@ function validate(form){
 		document.getElementById('valid_gender').style.display = 'none';
 		document.getElementById('invalid_gender').style.display = 'none';
 	}
-	
+
 	if(!document.getElementById('terms_agree').checked){
 		errors[errors.length] = "Agree to ToS";
 		document.getElementById('valid_tos').style.display = 'block';
@@ -70,7 +70,7 @@ function validate(form){
 		document.getElementById('valid_tos').style.display = 'none'
 		document.getElementById('invalid_tos').style.display = 'none';
 	}
-	
+
 	if(document.getElementById('password').value != document.getElementById('confirm_password').value){
 		errors[errors.length] = "Please make sure you entered the same passwords";
 		document.getElementById('valid_confirm').style.display = 'block';
@@ -80,21 +80,11 @@ function validate(form){
 		document.getElementById('valid_confirm').style.display = 'none';
 		document.getElementById('invalid_confirm').style.display = 'none';
 	}
-	 
+
 	if (errors.length > 0) {
-		reportErrors(errors);
 		return false;
-	} 
+	}
 	else {
 		return true;
-	}
-
-	function reportErrors(errors){
-		var msg = "Please Enter Valide Data...\n";
-		
-		for (var i = 0; i < errors.length; i++) {
-			var numError = i + 1;
-			msg += "\n" + numError + ". " + errors[i];
-		}
 	}
 }
