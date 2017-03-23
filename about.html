@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="style/base.css">
 	<link rel="stylesheet" href="style/about.css">
+	<link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
 	<script src = "scripts/colours.js"></script>
 	<title>About</title>
 </head>
@@ -56,24 +57,22 @@
 			nisl ut aliquip ex ea commodo consequat.</p>
 			
 			<div id = "main_block">
-				<div id = "about_content">
-					<h2> Who we are </h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+				<div id="accordion">
+					<h3>Who we are</h3>
+					<div><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
 					nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
 					enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
-					nisl ut aliquip ex ea commodo consequat.</p>
-					
-					<h2> Our Reviews </h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+					nisl ut aliquip ex ea commodo consequat.</p></div>
+					<h3>Our Reviews</h3>
+					<div><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
 					nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
 					enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
-					nisl ut aliquip ex ea commodo consequat.</p>
-					
-					<h2> What Believe In </h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+					nisl ut aliquip ex ea commodo consequat.</p></div>
+					<h3>What Believe In</h3>
+					<div><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
 					nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
 					enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
-					nisl ut aliquip ex ea commodo consequat.</p>
+					nisl ut aliquip ex ea commodo consequat.</p></div>
 				</div>
 				
 				<div id = "contact_info">
@@ -94,5 +93,19 @@
 			</span>
 		</footer>
 	</div>
+	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<script>
+	$( "#accordion" ).accordion();
+	// Hover states on the static widgets
+	$( "#dialog-link, #icons li" ).hover(
+		function() {
+			$( this ).addClass( "ui-state-hover" );
+		},
+		function() {
+			$( this ).removeClass( "ui-state-hover" );
+		}
+	);
+	</script>
 </body>
 </html>
