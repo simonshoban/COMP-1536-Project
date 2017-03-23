@@ -1,7 +1,7 @@
 var ck_email = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 var ck_username = /^[A-Za-z0-9_]{5,20}$/;
 var ck_password =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$*%^&-]).{5,20}$/;
-var ck_dateofbirth = /[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/;
+var ck_dateofbirth = /^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$/;
 
 function validate(form){
 	var email = form.email.value;
