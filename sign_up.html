@@ -9,10 +9,9 @@
 	<script src = "scripts/colours.js"></script>
 	<title>Sign Up</title>
 </head>
-	<body>
+<body>
 	<span id="banner">
 	</span>
-
 	<div class="page">
 		<header>
 			<a href="index.html"><img id="logo" src="images/GR8.png" alt="GR8"></a>
@@ -24,7 +23,6 @@
 				<label class="hidden" for="search-field">search field</label>
 				<input id="search-field" type="text"><input id="search-button" type="submit" Value="Search">
 			</form>
-
 		</header>
 		<nav>
 			<ul>
@@ -51,34 +49,28 @@
 				<li id="about"><a href="about.html">About</a></li>
 			</ul>
 		</nav>
-		<Main>
+		<main>
 			<h2>Sign Up</h2>
-
-				<form class="sign_up" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onSubmit="return validate(this);" name="form">
+			<form class="sign_up" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onSubmit="return validate(this);" name="form">
 				<div class="text_boxes">
 					<div>
 						<label for="username">Username<span id="invalid_user">*</span></label>
-						<input type="text" name="username" id="username" placeholder="Username">
-
+						<input type="text" name="username" id="username" placeholder="Username" maxlength = "20">
 					</div>
 					<span id = "valid_user"> Username must be between 5 and 20 characters and contain only letters and numbers</span>
-
 					<div>
 						<label for="email">Email<span id="invalid_email">*</span></label>
 						<input type="email" name="email" id="email" placeholder="Email">
-
 					</div>
 					<span id = "valid_email"> Please enter a valid Email</span>
 					<div>
 						<label for="password">Password<span id="invalid_password">*</span></label>
-						<input type="password" name="password" id="password">
-
+						<input type="password" name="password" id="password" maxlength = "20">
 					</div>
 					<span id = "valid_password"> Passwords must contain an uppercase letter, lowercase letter, a number, a symbol, and must be at least 5 characters long.</span>
 					<div>
 						<label for="confirm_password">Confirm Password<span id="invalid_confirm">*</span></label>
-						<input type="password" name="password_confirm" name="confirm_password" id="confirm_password">
-
+						<input type="password" name="password_confirm" name="confirm_password" id="confirm_password" maxlength = "20">
 					</div>
 					<span id = "valid_confirm"> Passwords don't match</span>
 				</div>
@@ -86,12 +78,11 @@
 					<input type="radio" name="gender" value="male" id="male"> <label for="male"> Male </label>
 					<input type="radio" name="gender" value="female"id="female"> <label for="female"> Female </label>
 					<input type="radio" name="gender" value="other" id="other"> <label for="other"> Other<span id="invalid_gender">*</span></label>
-
 				</div>
 				<span id = "valid_gender"> Please select a gender</span>
 				<div>
 					<label for="dateOfBirth" id="date_of_birth_label">Date of Birth<span id="invalid_dob">*</span></label>
-					<input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="yyyy-mm-dd">
+					<input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="yyyy-mm-dd" maxlength = "10">
 				</div>
 				<span id = "valid_dob"> Please enter a valid birth date</span>
 				<div>
@@ -105,7 +96,6 @@
 			</form>
 		</main>
 		<footer>
-
 			<p>Copyright &copy; 2017</p>
 			<span id="social_media">
 			<!--icons from https://www.iconfinder.com/Io9mkt-->
@@ -115,5 +105,5 @@
 			</span>
 		</footer>
 	</div>
-	</body>
+</body>
 </html>
