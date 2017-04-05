@@ -33,7 +33,7 @@
 	}
 	
 	//Sanitize the REQUEST values - parameters may come from GET or POST
-	$login = clean($_REQUEST['login']);
+	$login = clean($_REQUEST['username']);
 	$password = clean($_REQUEST['password']);
 	
 	//Input Validations

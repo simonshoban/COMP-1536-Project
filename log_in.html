@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include 'forum/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +21,17 @@
 			<a href="index.html"><img id="logo" src="images/GR8.png" alt="GR8"></a>
 			<h1 id="slogan">We rate games from H8 to GR8</h1>
 			<div id="login">
-				<a href="log_in.html">Log in</a><br><a href="sign_up.html">Sign up</a>
+				<?php 
+				if (!isLoggedIn()){
+					echo '<a href="log_in.html">Log in</a><br><a href="sign_up.html">Sign up</a>';
+				}
+				else {
+					echo "Logged in as <strong>".$_SESSION['SESS_FIRST_NAME']."</strong> <a href='forum/logout.php'>Logout</a>";
+				}
+				?>
 			</div>
+			
+			
 			<form id="search">
 				<label class="hidden" for="search-field">search field</label>
 				<input id="search-field" type="text"><input id="search-button" type="submit" Value="Search">
@@ -51,7 +64,7 @@
 		</nav>
 		<main>
 			<h2>Login</h2>
-				<form class="sign_up" method="post" action="#" onSubmit="return validate(this);" name="form">
+				<form class="sign_up" method="post" action="forum/login.php" onSubmit="return validate(this);" name="form">
 				<div class="text_boxes">
 					<div>
 						<label for="username">Username</label>
