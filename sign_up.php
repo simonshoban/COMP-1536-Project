@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +54,7 @@
 		</nav>
 		<main>
 			<h2>Sign Up</h2>
-			<form class="sign_up" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onSubmit="return validate(this);" name="form">
+			<form class="sign_up" method="post" action="forum/register.php" onSubmit="return validate(this);" name="form">
 				<div class="text_boxes">
 					<div>
 						<label for="username">Username<span id="invalid_user">*</span></label>
