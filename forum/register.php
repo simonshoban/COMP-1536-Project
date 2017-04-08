@@ -95,7 +95,7 @@
 	
 	//Check whether the query was successful or not
 	if($result) {
-		header("location: ../index.html");
+		header("location: ../thankyou.html");
 		exit();
 	}else {
 		die("Query failed");
