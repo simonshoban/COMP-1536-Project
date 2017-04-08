@@ -50,7 +50,7 @@
 	if($errflag) {
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 		session_write_close();
-		header("location: login_form.php");
+		header("location: location: ../log_in.html");
 		exit();
 	}
 	
@@ -68,13 +68,13 @@
 			$_SESSION['SESS_FIRST_NAME'] = $member['firstname'];
 			$_SESSION['SESS_LAST_NAME'] = $member['lastname'];
 			session_write_close();
-			header("location: ".HOMEURL);
+			header("location: ../index.html");
 			exit();
 		}else {
 			//Login failed
 			$errmsg_arr[] = 'Login failed';
 			$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
-			header("location: login_form.php");
+			header("location: ../log_in.html");
 			exit();
 		}
 	}else {

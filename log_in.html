@@ -64,11 +64,22 @@
 		</nav>
 		<main>
 			<h2>Login</h2>
+			
+
 				<form class="sign_up" method="post" action="forum/login.php" onSubmit="return validate(this);" name="form">
 				<div class="text_boxes">
+				<?php
+	if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+		echo '<ul class="err">';
+		foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+			echo '<li>',$msg,'</li>'; 
+		}
+		echo '</ul>';
+		unset($_SESSION['ERRMSG_ARR']);
+	}?>
 					<div>
-						<label for="username">Username</label>
-						<input type="text" name="username" id="username" placeholder="Username" maxlength = "20">		
+						<label for="email">Email</label>
+						<input type="text" name="username" id="email" placeholder="Email" maxlength = "20">		
 					</div>
 					<div>
 						<label for="password">Password</label>

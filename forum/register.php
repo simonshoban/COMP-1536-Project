@@ -71,7 +71,7 @@
 		$result = mysqli_query($GLOBALS["___mysqli_ston"], $qry);
 		if($result) {
 			if(mysqli_num_rows($result) > 0) {
-				$errmsg_arr[] = 'Login ID already in use';
+				$errmsg_arr[] = 'Email already in use';
 				$errflag = true;
 			}
 			@((mysqli_free_result($result) || (is_object($result) && (get_class($result) == "mysqli_result"))) ? true : false);
@@ -85,7 +85,7 @@
 	if($errflag) {
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 		session_write_close();
-		header("location: register_form.php");
+		header("location: ../sign_up.html");
 		exit();
 	}
 
@@ -95,7 +95,7 @@
 	
 	//Check whether the query was successful or not
 	if($result) {
-		header("location: login.php?login=".$login."&password=".$password);
+		header("location: ../index.html");
 		exit();
 	}else {
 		die("Query failed");

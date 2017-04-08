@@ -8,6 +8,6 @@
 	unset($_SESSION['SESS_FIRST_NAME']);
 	unset($_SESSION['SESS_LAST_NAME']);
 	session_write_close();
-	header("location: ".HOMEURL);
+	header("location: ..//index.html");
 	exit();
 ?>

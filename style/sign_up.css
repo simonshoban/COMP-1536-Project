@@ -21,6 +21,15 @@ h2 {
 .sign_up input{
 	margin: 		20px 3px;
 }
+.err {
+	margin-left:	80px;
+	list-style-type:none;
+	margin:			0 auto;
+	color:			#e6abab;		
+}
+.err li {
+	margin-left: 	80px;
+}
 #date_of_birth_label{
 	display:		inline-block;
 	min-width:		150px;
