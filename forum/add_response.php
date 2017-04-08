@@ -13,6 +13,7 @@ $id=$_POST['id'];
 // get values that sent from form
 $response=$_POST['response'];
 $member_id=$_SESSION['SESS_MEMBER_ID'];
+$lastpage=$_POST['lastpage'];
 
 $datetime=date("d/m/y H:i:s"); // create date and time
 
@@ -21,7 +22,7 @@ $sql2="INSERT INTO $tbl_name(topic_id, member_id, response, datetime)VALUES('$id
 $result2=mysqli_query($GLOBALS["___mysqli_ston"], $sql2);
 
 if($result2)
-	header('Location: view_topic.php?id='.$id);
+	header('Location: '.$lastpage);
 else {
 	echo "ERROR".((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));
 }

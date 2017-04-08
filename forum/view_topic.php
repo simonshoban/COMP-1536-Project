@@ -12,7 +12,8 @@
 	// get value of id that sent from address bar
 	$id=$_GET['id'];
 
-	$sql="SELECT * FROM $tbl_name WHERE id='$id'";
+	//1d
+	$sql="SELECT * FROM $tbl_name JOIN members ON members.member_id = topic.member_id WHERE id='$id' ";
 	$result=mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 
 	$rows=mysqli_fetch_array($result);
@@ -29,7 +30,8 @@
 </tr>
 
 <tr>
-<td bgcolor="#F8F7F1"><strong>By :</strong> <strong></td>
+<!-- //1d -->
+<td bgcolor="#F8F7F1"><strong>By : </strong><?php echo $rows['firstname'].' '.$rows['lastname']; ?><strong></td>
 </tr>
 
 <tr>
@@ -42,7 +44,8 @@
 <?php
 $tbl_name2="response"; // Switch to table "response"
 
-$sql2="SELECT * FROM $tbl_name2 WHERE topic_id='$id'";
+//1d
+$sql2="SELECT * FROM $tbl_name2 JOIN members ON members.member_id = response.member_id WHERE topic_id='$id'";
 $result2=mysqli_query($GLOBALS["___mysqli_ston"], $sql2);
 
 while($rows=mysqli_fetch_array($result2)){
@@ -58,7 +61,8 @@ while($rows=mysqli_fetch_array($result2)){
 <tr>
 <td width="18%" bgcolor="#F8F7F1"><strong>Name</strong></td>
 <td width="5%" bgcolor="#F8F7F1">:</td>
-<td width="77%" bgcolor="#F8F7F1"></td>
+<!-- //1d -->
+<td width="77%" bgcolor="#F8F7F1"><?php echo $rows['firstname'].' '.$rows['lastname']; ?> </td>
 </tr>
 <tr>
 <td bgcolor="#F8F7F1"><strong>Response</strong></td>
@@ -79,24 +83,32 @@ while($rows=mysqli_fetch_array($result2)){
 ((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
 ?>
 
+<?php 
+//1b
+if (!isLoggedIn()) {
+	echo "Please login to post comments.";
+	exit();
+}
+?>
+
 <BR>
-<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
-<form name="form1" method="post" action="add_response.php">
-<td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td valign="top"><strong>Response</strong></td>
-<td valign="top">:</td>
-<td><textarea name="response" cols="45" rows="3" id="answer"></textarea></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td><input name="id" type="hidden" value="<?php echo $id; ?>"></td>
-<td><input type="submit" name="Submit" value="Submit"> <input type="reset" name="Submit2" value="Reset"></td>
-</tr>
-</table>
-</td>
-</form>
-</tr>
-</table>
+	<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+	<tr>
+	<form name="form1" method="post" action="add_response.php">
+	<td>
+	<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+	<tr>
+	<td valign="top"><strong>Response</strong></td>
+	<td valign="top">:</td>
+	<td><textarea name="response" cols="45" rows="3" id="answer"></textarea></td>
+	</tr>
+	<tr>
+	<td>&nbsp;</td>
+	<td><input name="id" type="hidden" value="<?php echo $id; ?>"></td>
+	<td><input type="submit" name="Submit" value="Submit"> <input type="reset" name="Submit2" value="Reset"></td>
+	</tr>
+	</table>
+	</td>
+	</form>
+	</tr>
+	</table>

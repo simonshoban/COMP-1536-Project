@@ -149,6 +149,7 @@ footer { /*sets a fixed height for the footer and uses a flexbox to align the te
 	bottom:				0px;
 	display:			flex;
 	align-items:		center;
+	left:				0;
 }
 footer p { /*sets margin to center footer text horizontally*/
 	margin: 			0px auto;
