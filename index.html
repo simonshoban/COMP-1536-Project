@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include 'forum/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,14 @@
 			<a href=""><img id="logo" src="images/GR8.png" alt="GR8 logo"></a>
 			<h1 id="slogan">We rate games from H8 to GR8</h1>
 			<div id="login">
-				<a href="log_in.html">Log in</a><br><a href="sign_up.html">Sign up</a>
+				<?php
+				if (!isLoggedIn()){
+					echo '<a href="log_in.html">Log in </a> <br><a href="sign_up.html">Sign up</a>';
+				}
+				else {
+					echo "Logged in as <strong>".$_SESSION['SESS_FIRST_NAME']."</strong> <a href='forum/logout.php'>Logout</a>";
+				}
+				?>
 			</div>
 			<form id="search" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
 				<label class="hidden" for="search-field">search field</label>
@@ -59,8 +70,8 @@
 							<a href="review_template.html"><img class="review_image" src="images/index_images/clash.jpg" alt="clashroyale"></a>
 							<div class="review_excerpt">
 								<h2><a href="review_template.html">Clash Royale</a></h2>
-								<p>Clash Royale is a fast paced, card based PvP brawler. 
-								Collect Clash troops, 
+								<p>Clash Royale is a fast paced, card based PvP brawler.
+								Collect Clash troops,
 								and use them to wreak havoc on your opponent’s towers!
 								</p>
 								<a class="more" href="review_template.html">Click to view the full article</a>
