@@ -18,6 +18,9 @@
 	height:				auto;
 	margin: 			20px;
 }
+.review_img{
+	text-align:			center;
+}
 #comments{
 	list-style:			none;
 	padding:			0;
