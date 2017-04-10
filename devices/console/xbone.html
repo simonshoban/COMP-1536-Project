@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include '../../forum/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,14 @@
 			<a href="../../index.html"><img id="logo" src="../../images/GR8.png" alt="GR8"></a>
 			<h1 id="slogan">We rate games from H8 to GR8</h1>
 			<div id="login">
-				<a href="../../log_in.html">Log in</a><br><a href="../../sign_up.html">Sign up</a>
+				<?php
+				if (!isLoggedIn()){
+					echo '<a href="../../log_in.html">Log in</a><br><a href="../../sign_up.html">Sign up</a>';
+				}
+				else {
+					echo "Logged in as <strong>".$_SESSION['SESS_FIRST_NAME']."</strong> <a href='../../forum/logout.php'>Logout</a>";
+				}
+				?>
 			</div>
 			<form id="search">
 				<label class="hidden" for="search-field">search field</label>
@@ -47,7 +58,7 @@
 				<li id="about"><a href="../../about.html">About</a></li>
 			</ul>
 		</nav>
-		<h1 id="device_type">Xbox One</h1>	
+		<h1 id="device_type">Xbox One</h1>
 		<main id="article_body">
 			<div id="main_article">
 				<a id="main_pic" href="xbone/console_review_template.html"><img src="../../images/console_images/Xbox1_images/forzaHorizon3.jpg" alt="Forza Horizon 3"></a>
@@ -55,7 +66,7 @@
 					<a class="review_title" id="headline" href="xbone/console_review_template.html">Forza Horizon 3</a>
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo illi intellegunt quid Epicurus dicat, ego non intellego? Occultum facinus esse potuerit, gaudebit; Id enim natura desiderat. Iubet igitur nos Pythius Apollo noscere nosmet ipsos. Quamquam te quidem video minime esse deterritum. Quod ea non occurrentia fingunt, vincunt Aristonem; An potest, inquit ille, quicquam esse suavius quam nihil dolere? Duo Reges: constructio interretenoscere nosmet ipsos. Quamquam te quidem video minime esse deterritum. Quod ea non occurrentia fingunt, vincunt Aristonem; An potest, inquit ille, quicquam esse suavius quam nihil dolere.........</p>
-					
+
 					<a class="more" href="xbone/console_review_template.html">Click to view the full article</a>
 					</div>
 			</div>
@@ -98,7 +109,7 @@
 				<a href=""><img src="../../images/social_media/twitter.png" alt="twitter"></a>
 				<a href=""><img src="../../images/social_media/youtube.png" alt="youtube"></a>
 			</span>
-		</footer>	
+		</footer>
 	</div>
 </body>
 </html>

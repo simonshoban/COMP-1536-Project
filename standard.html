@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include 'forum/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +17,14 @@
 		<header>
 			<a href=""><img id="logo" src="images/GR8.png" alt="GR8"></a>
 			<div id="login">
-				<a href="">Log in</a><br><a href="">Sign up</a>
+				<?php
+				if (!isLoggedIn()){
+					echo '<a href="log_in.html">Log in </a> <br><a href="sign_up.html">Sign up</a>';
+				}
+				else {
+					echo "Logged in as <strong>".$_SESSION['SESS_FIRST_NAME']."</strong> <a href='forum/logout.php'>Logout</a>";
+				}
+				?>
 			</div>
 			<form id="search">
 				<label class="hidden" for="search-field">search field</label>
@@ -46,7 +57,7 @@
 			</ul>
 		</nav>
 		<main>
-		
+
 		</main>
 		<footer>
 			<p>Copyright &copy; 2017</p>

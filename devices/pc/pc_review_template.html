@@ -11,6 +11,8 @@
 
 	// get value of id that sent from address bar
 	$id=354;
+	session_start();
+	include '../../forum/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +31,14 @@
 			<a href="../../index.html"><img id="logo" src="../../images/GR8.png" alt="GR8"></a>
 			<h1 id="slogan">We rate games from H8 to GR8</h1>
 			<div id="login">
-				<a href="../../log_in.html">Log in</a><br><a href="../../sign_up.html">Sign up</a>
+				<?php
+				if (!isLoggedIn()){
+					echo '<a href="../../log_in.html">Log in</a><br><a href="../../sign_up.html">Sign up</a>';
+				}
+				else {
+					echo "Logged in as <strong>".$_SESSION['SESS_FIRST_NAME']."</strong> <a href='../../forum/logout.php'>Logout</a>";
+				}
+				?>
 			</div>
 			<form id="search">
 				<label class="hidden" for="search-field">search field</label>
@@ -70,8 +79,8 @@
 					<p>Date: whenever</p>
 					<p>Genre: same</p>
 				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				Ergo illi intellegunt quid Epicurus dicat, ego non intellego? 
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Ergo illi intellegunt quid Epicurus dicat, ego non intellego?
 				Occultum facinus esse potuerit, gaudebit; Id enim natura desiderat.
 				Iubet igitur nos Pythius Apollo noscere nosmet ipsos.
 				Quamquam te quidem video minime esse deterritum.
@@ -79,8 +88,8 @@
 				An potest, inquit ille, quicquam esse suavius quam nihil dolere?
 				Duo Reges: constructio interretenoscere nosmet ipsos.
 				Quamquam te quidem video minime esse deterritum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				Ergo illi intellegunt quid Epicurus dicat, ego non intellego? 
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Ergo illi intellegunt quid Epicurus dicat, ego non intellego?
 				Occultum facinus esse potuerit, gaudebit; Id enim natura desiderat.
 				Iubet igitur nos Pythius Apollo noscere nosmet ipsos.
 				Quamquam te quidem video minime esse deterritum.
@@ -88,8 +97,8 @@
 				An potest, inquit ille, quicquam esse suavius quam nihil dolere?
 				Duo Reges: constructio interretenoscere nosmet ipsos.
 				Quamquam te quidem video minime esse deterritum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				Ergo illi intellegunt quid Epicurus dicat, ego non intellego? 
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Ergo illi intellegunt quid Epicurus dicat, ego non intellego?
 				Occultum facinus esse potuerit, gaudebit; Id enim natura desiderat.
 				Iubet igitur nos Pythius Apollo noscere nosmet ipsos.
 				Quamquam te quidem video minime esse deterritum.
@@ -97,8 +106,8 @@
 				An potest, inquit ille, quicquam esse suavius quam nihil dolere?
 				Duo Reges: constructio interretenoscere nosmet ipsos.
 				Quamquam te quidem video minime esse deterritum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				Ergo illi intellegunt quid Epicurus dicat, ego non intellego? 
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Ergo illi intellegunt quid Epicurus dicat, ego non intellego?
 				Occultum facinus esse potuerit, gaudebit; Id enim natura desiderat.
 				Iubet igitur nos Pythius Apollo noscere nosmet ipsos.
 				Quamquam te quidem video minime esse deterritum.
@@ -137,19 +146,19 @@ while($rows=mysqli_fetch_array($result2)){
 ((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
 ?>
 <br>
-<?php 
+<?php
 
 if (isLoggedIn()) {
 	$previous = $_SERVER['SCRIPT_URI'];
 	echo 		'<form id="comment_form" method="post" action="../../forum/add_response.php">
 					Post your comments:<br><br>
-					
+
 					<label class="hidden" for="h8_button">hate</label>
-					
+
 					<label><input type="radio" value="H8" name="h8_gr8" id="h8_button"><img class="radio_off" src="../../images/button_images/H8_Button_Idle_Small.png" alt="H8"><img class="radio_on"  src="../../images/button_images/H8_Button_Hover_Small.png" alt="H8"></label>
 					<label class="hidden" for="gr8_button">great</label>
 					<label><input type="radio" value="GR8" name="h8_gr8" id="gr8_button"><img class="radio_off"  src="../../images/button_images/GR8_Button_Idle_Small.png" alt="GR8"><img class="radio_on" src="../../images/button_images/GR8_Button_Hover_Small.png" alt="GR8"></label>
- 					
+
  					<label class="hidden" for="comment_section">post comment here</label>
  					<br>
  					<textarea name="response" id="comment_section"></textarea>
@@ -162,7 +171,7 @@ if (isLoggedIn()) {
 				</form>';
 }
 ?>
-				
+
 				<a id="next_article" href="">Next article: $random_article or something</a>
 				<br id="clearer">
 			</div>

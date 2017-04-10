@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include '../../../forum/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,14 @@
 			<a href="../../../index.html"><img id="logo" src="../../../images/GR8.png" alt="GR8"></a>
 			<h1 id="slogan">We rate games from H8 to GR8</h1>
 			<div id="login">
-				<a href="../../../log_in.html">Log in</a><br><a href="../../../sign_up.html">Sign up</a>
+				<?php
+				if (!isLoggedIn()){
+					echo '<a href="../../../log_in.html">Log in</a><br><a href="../../../sign_up.html">Sign up</a>';
+				}
+				else {
+					echo "Logged in as <strong>".$_SESSION['SESS_FIRST_NAME']."</strong> <a href='../../../forum/logout.php'>Logout</a>";
+				}
+				?>
 			</div>
 			<form id="search">
 				<label class="hidden" for="search-field">search field</label>
@@ -57,28 +68,28 @@
 					<p>Genre: RPG</p>
 				</div>
 				<p>After twenty years and six generations, GameFreak has done it again.</p>
-				
+
 				<p>This time we start of in the Alola region, a tropical island chain inspired
 				by Hawaii and the Galapagos Islands. But this warm and cheery locale hides a grim
-				story. The region has been marred by a wave of crime and poverty. One of the cities, 
+				story. The region has been marred by a wave of crime and poverty. One of the cities,
 				Po Town, has been completely walled off after it was taken over by Team Skull, Alola's
 				crime syndicate headed by ya boi "destruction in human form" Guzma.</p>
-				
+
 				<p>As the Alolan economy stagnates, Professor Kukui of Melemele Island decides that it's
 				time for Alola to take it's place on the world stage by creating the Alolan Pokemon League
 				to attract wealthy coastal elites from Unova and Kalos to buy overpriced trinkets and take selfies.
 				Unfortunately, the best he could get was a psychopathic child from Kanto: you.</p>
-				
+
 				<p>Good news! Your plot armour is thicker than ever and you always happen to be in the right place
 				at the right time! Despite the slow pace and hand-holding at the start of the game, the story is
 				surprisingly good. The standard eight Pokemon Gyms have been replaced by the seven Island Trials.
 				Although they serve the same purpose, admission into the Pokemon League, they provide fresh content
 				for those of us who are tired of the old formula.</p>
-				
+
 				<h3 id="comment_header">Comments:</h3>
 				<ol id="comments">
 					<li>
-						<h3>Mercedes Ben:</h3> 
+						<h3>Mercedes Ben:</h3>
 						<br>
 						<p>This review is awesome!</p>
 					</li>
@@ -95,13 +106,13 @@
 				</ol>
 				<form id="comment_form" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
 					Post your comments:<br><br>
-					
+
 					<label class="hidden" for="h8_button">hate</label>
-					
+
 					<label><input type="radio" value="H8" name="h8_gr8" id="h8_button"><img class="radio_off" src="../../../images/button_images/H8_Button_Idle_Small.png" alt="H8"><img class="radio_on"  src="../../../images/button_images/H8_Button_Hover_Small.png" alt="H8"></label>
 					<label class="hidden" for="gr8_button">great</label>
 					<label><input type="radio" value="GR8" name="h8_gr8" id="gr8_button"><img class="radio_off"  src="../../../images/button_images/GR8_Button_Idle_Small.png" alt="GR8"><img class="radio_on" src="../../../images/button_images/GR8_Button_Hover_Small.png" alt="GR8"></label>
- 					
+
  					<label class="hidden" for="comment_section">post comment here</label>
  					<br>
  					<textarea name="reply" id="comment_section"></textarea>
