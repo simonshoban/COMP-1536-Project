@@ -11,8 +11,6 @@
 
 	// get value of id that sent from address bar
 	$id=354;
-	session_start();
-	include '../../forum/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -129,7 +127,7 @@ while($rows=mysqli_fetch_array($result2)){
 <tr>
 <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
-<td width="77%" bgcolor="#393939"><?php echo $rows['firstname'].' '.$rows['lastname']; ?> </td>
+<td width="77%" bgcolor="#393939"><?php echo $rows['firstname']; ?> </td>
 <td bgcolor="#393939"><?php echo $rows['datetime']; ?></td>
 </tr>
 <tr>
