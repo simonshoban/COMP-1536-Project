@@ -18,8 +18,12 @@
 	height:				auto;
 	margin: 			20px;
 }
-.review_img{
+.review_img_container {
 	text-align:			center;
+}
+.review_img {
+	height:				auto;
+	margin:				20px;
 }
 #comments{
 	list-style:			none;
@@ -101,6 +105,16 @@ input:not(checked) ~ .radio_off {
 @media screen and (max-width: 768px) {
 	#review_img {
 		float:			none;
+		width:			100%;
+		margin:			0;
+	}
+	
+	figure {
+		width:			100%;
+		margin:			0;
+	}
+	
+	.review_img {
 		width:			100%;
 		margin:			0;
 	}
