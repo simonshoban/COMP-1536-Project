@@ -1,6 +1,16 @@
 <?php
-	session_start();
+
 	include '../../../forum/functions.php';
+	require_once('../../../forum/config.php');
+	session_start();
+
+		// Connect to server and select database.
+	($GLOBALS["___mysqli_ston"] = mysqli_connect(DB_HOST,  DB_USER,  DB_PASSWORD))or die("cannot connect");
+	((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . constant('DB_DATABASE')))or die("cannot select DB");
+	$tbl_name="topic"; // Table name
+
+	// get value of id that sent from address bar
+	$id=703;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -103,24 +113,41 @@
 				An potest, inquit ille, quicquam esse suavius quam nihil dolere?
 				Duo Reges: constructio interretenoscere nosmet ipsos.</p>
 				<h3 id="comment_header">Comments:</h3>
-				<ol id="comments">
-					<li>
-						<h3>Mercedes Ben:</h3>
-						<br>
-						<p>This review is awesome!</p>
-					</li>
-					<li>
-						<h3>Chevrolet Camero:</h3>
-						<br>
-						<p>This review is asss ajajjaajjajajaaajajajajaj </p>
-					</li>
-					<li>
-						<h3>Shoban:</h3>
-						<br>
-						<p>Me to thx</p>
-					</li>
-				</ol>
-				<form id="comment_form" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+				<?php
+
+$tbl_name2="response"; // Switch to table "response"
+
+//1d
+$sql2="SELECT * FROM $tbl_name2 JOIN members ON members.member_id = response.member_id WHERE topic_id='$id'";
+$result2=mysqli_query($GLOBALS["___mysqli_ston"], $sql2);
+
+while($rows=mysqli_fetch_array($result2)){
+?>
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<tr>
+<td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+<tr>
+<td width="77%" bgcolor="#393939"><?php echo $rows['firstname']; ?> </td>
+<td bgcolor="#393939"><?php echo $rows['datetime']; ?></td>
+</tr>
+<tr>
+<td bgcolor="#393939" colspan="2" ><br><?php echo $rows['response']; ?><br></td>
+</tr>
+</table></td>
+</tr>
+</table><br>
+<table>
+<tr>
+
+<?php
+}
+((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
+?>
+<br>
+<?php
+if (isLoggedIn()) {
+	$previous = $_SERVER['SCRIPT_URI'];
+	echo 		'<form id="comment_form" method="post" action="../../../forum/add_response.php">
 					Post your comments:<br><br>
 
 					<label class="hidden" for="h8_button">hate</label>
@@ -131,10 +158,16 @@
 
  					<label class="hidden" for="comment_section">post comment here</label>
  					<br>
- 					<textarea name="reply" id="comment_section"></textarea>
-					<input id="comment_submit" type="submit" Value="Submit">
-				</form>
-				<a id="next_article" href="">Next article: $random_article or something</a>
+ 					<textarea name="response" id="comment_section"></textarea>
+					<input name="id" type="hidden" value="';
+					echo $id;
+					echo '"><input type="submit" id="comment_submit" name="Submit" value="Submit">';
+					echo '<input name="lastpage" type="hidden" value="';
+					echo $previous;
+					echo '">
+				</form>';
+}
+?>
 				<br id="clearer">
 			</div>
 		</main>
