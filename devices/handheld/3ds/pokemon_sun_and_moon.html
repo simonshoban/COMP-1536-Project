@@ -96,7 +96,7 @@
 				<div class="review_img_container">
 					<figure>
 						<img class="review_img" src="../../../images/review_images/3ds/SM_02.jpg" alt="Smiling face of the protagonist">
-						<figcaption><i>The only expression you'll ever see on this guy</i></figcaption>
+						<figcaption>The only expression you'll ever see on this guy</figcaption>
 					</figure>
 				</div>
 				
@@ -112,7 +112,7 @@
 				<div class="review_img_container">
 					<figure>
 						<img class="review_img" src="../../../images/review_images/3ds/SM_03.jpg" alt="Totem Wishiwashi">
-						<figcaption><i>We're gonna need a bigger Lapras</i></figcaption>
+						<figcaption>We're gonna need a bigger Lapras</figcaption>
 					</figure>
 				</div>
 				
@@ -124,7 +124,7 @@
 				<div class="review_img_container">
 					<figure>
 						<img class="review_img" src="../../../images/review_images/3ds/SM_04.jpg" alt="Island Kahuna Hala">
-						<figcaption><i>Hala: Hau's grandfather and Kahuna of Melemele Island</i></figcaption>
+						<figcaption>Hala: Hau's grandfather and Kahuna of Melemele Island</figcaption>
 					</figure>
 				</div>
 				
@@ -139,7 +139,7 @@
 				<div class="review_img_container">
 					<figure>
 						<img class="review_img" src="../../../images/review_images/3ds/SM_05.jpg" alt="Team Skull's Gladion">
-						<figcaption><i>Gladion appears to be suffering from carpal tunnel syndrome</i></figcaption>
+						<figcaption>Gladion appears to be suffering from carpal tunnel syndrome</figcaption>
 					</figure>
 				</div>
 				
@@ -154,7 +154,7 @@
 				<div class="review_img_container">
 					<figure>
 						<img class="review_img" src="../../../images/review_images/3ds/SM_06.jpg" alt="Unova's Elite Four Grimsley">
-						<figcaption><i>Unova's Elite Four Grimsley before and after discovering anime</i></figcaption>
+						<figcaption>Unova's Elite Four Grimsley before and after discovering anime</figcaption>
 					</figure>
 				</div>
 				
@@ -166,59 +166,62 @@
 				<h3 id="comment_header">Comments:</h3>
 				<?php
 
-$tbl_name2="response"; // Switch to table "response"
+					$tbl_name2="response"; // Switch to table "response"
 
-//1d
-$sql2="SELECT * FROM $tbl_name2 JOIN members ON members.member_id = response.member_id WHERE topic_id='$id'";
-$result2=mysqli_query($GLOBALS["___mysqli_ston"], $sql2);
+					//1d
+					$sql2="SELECT * FROM $tbl_name2 JOIN members ON members.member_id = response.member_id WHERE topic_id='$id'";
+					$result2=mysqli_query($GLOBALS["___mysqli_ston"], $sql2);
 
-while($rows=mysqli_fetch_array($result2)){
-?>
-<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
-<td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td width="77%" bgcolor="#393939"><?php echo $rows['firstname']; ?> </td>
-<td bgcolor="#393939"><?php echo $rows['datetime']; ?></td>
-</tr>
-<tr>
-<td bgcolor="#393939" colspan="2" ><br><?php echo $rows['response']; ?><br></td>
-</tr>
-</table></td>
-</tr>
-</table><br>
-<table>
-<tr>
+					while($rows=mysqli_fetch_array($result2)){
+				?>
+				
+				<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+					<tr>
+						<td>
+							<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+								<tr>
+									<td width="77%" bgcolor="#393939"><?php echo $rows['firstname']; ?> </td>
+									<td bgcolor="#393939"><?php echo $rows['datetime']; ?></td>
+								</tr>
+								<tr>
+									<td bgcolor="#393939" colspan="2" ><br><?php echo $rows['response']; ?><br></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table><br>
+				<table>
+				<tr>
 
-<?php
-}
-((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
-?>
-<br>
-<?php
-if (isLoggedIn()) {
-	$previous = $_SERVER['SCRIPT_URI'];
-	echo 		'<form id="comment_form" method="post" action="../../../forum/add_response.php">
-					Post your comments:<br><br>
+				<?php
+					}
+					((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
+				?>
+					<br>
+				<?php
+					if (isLoggedIn()) {
+						$previous = $_SERVER['SCRIPT_URI'];
+						echo 		'<form id="comment_form" method="post" action="../../../forum/add_response.php">
+										Post your comments:<br><br>
 
-					<label class="hidden" for="h8_button">hate</label>
+										<label class="hidden" for="h8_button">hate</label>
 
-					<label><input type="radio" value="H8" name="h8_gr8" id="h8_button"><img class="radio_off" src="../../../images/button_images/H8_Button_Idle_Small.png" alt="H8"><img class="radio_on"  src="../../../images/button_images/H8_Button_Hover_Small.png" alt="H8"></label>
-					<label class="hidden" for="gr8_button">great</label>
-					<label><input type="radio" value="GR8" name="h8_gr8" id="gr8_button"><img class="radio_off"  src="../../../images/button_images/GR8_Button_Idle_Small.png" alt="GR8"><img class="radio_on" src="../../../images/button_images/GR8_Button_Hover_Small.png" alt="GR8"></label>
+										<label><input type="radio" value="H8" name="h8_gr8" id="h8_button"><img class="radio_off" src="../../../images/button_images/H8_Button_Idle_Small.png" alt="H8"><img class="radio_on"  src="../../../images/button_images/H8_Button_Hover_Small.png" alt="H8"></label>
+										<label class="hidden" for="gr8_button">great</label>
+										<label><input type="radio" value="GR8" name="h8_gr8" id="gr8_button"><img class="radio_off"  src="../../../images/button_images/GR8_Button_Idle_Small.png" alt="GR8"><img class="radio_on" src="../../../images/button_images/GR8_Button_Hover_Small.png" alt="GR8"></label>
 
- 					<label class="hidden" for="comment_section">post comment here</label>
- 					<br>
- 					<textarea name="response" id="comment_section"></textarea>
-					<input name="id" type="hidden" value="';
-					echo $id;
-					echo '"><input type="submit" id="comment_submit" name="Submit" value="Submit">';
-					echo '<input name="lastpage" type="hidden" value="';
-					echo $previous;
-					echo '">
-				</form>';
-}
-?>
+										<label class="hidden" for="comment_section">post comment here</label>
+										<br>
+										<textarea name="response" id="comment_section"></textarea>
+										<input name="id" type="hidden" value="';
+										echo $id;
+										echo '"><input type="submit" id="comment_submit" name="Submit" value="Submit">';
+										echo '<input name="lastpage" type="hidden" value="';
+										echo $previous;
+										echo '">
+									</form>';
+					}
+				?>
 				<br id="clearer">
 			</div>
 		</main>

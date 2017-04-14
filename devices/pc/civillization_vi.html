@@ -1,0 +1,289 @@
+<?php
+
+	include '../../forum/functions.php';
+	require_once('../../forum/config.php');
+	session_start();
+
+		// Connect to server and select database.
+	($GLOBALS["___mysqli_ston"] = mysqli_connect(DB_HOST,  DB_USER,  DB_PASSWORD))or die("cannot connect");
+	((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . constant('DB_DATABASE')))or die("cannot select DB");
+	$tbl_name="topic"; // Table name
+
+	// get value of id that sent from address bar
+	$id=354;
+	session_start();
+	include '../../forum/functions.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../../style/base.css">
+	<link rel="stylesheet" href="../../style/review_template.css">
+	<script src = "../../scripts/colours.js"></script>
+	<title>Europa Universalis IV</title>
+</head>
+<body>
+	<span id="banner"></span>
+	<div class="page">
+		<header>
+			<a href="../../index.html"><img id="logo" src="../../images/GR8.png" alt="GR8"></a>
+			<h1 id="slogan">We rate games from H8 to GR8</h1>
+			<div id="login">
+				<?php
+				if (!isLoggedIn()){
+					echo '<a href="../../log_in.html">Log in</a><br><a href="../../sign_up.html">Sign up</a>';
+				}
+				else {
+					echo "Logged in as <strong>".$_SESSION['SESS_FIRST_NAME']."</strong> <a href='../../forum/logout.php'>Logout</a>";
+				}
+				?>
+			</div>
+			<form id="search">
+				<label class="hidden" for="search-field">search field</label>
+				<input id="search-field" type="text"><input id="search-button" type="submit" Value="Search" >
+			</form>
+		</header>
+		<nav>
+			<ul>
+				<li id="console"><a href="../console.html">Console</a>
+					<div class = "dropdown">
+						<a href = "../console/ps4.html">PlayStation 4</a>
+						<a href = "../console/xbone.html">Xbox One</a>
+						<a href = "../console/switch.html">Nintendo Switch</a>
+					</div>
+				</li>
+				<li id="pc"><a href="../pc.html">PC</a></li>
+				<li id="handheld"><a href="../handheld.html">Handheld</a>
+					<div class = "dropdown">
+						<a href = "../handheld/vita.html">PlayStation Vita</a>
+						<a href = "../handheld/3ds.html">Nintendo 3DS</a>
+					</div>
+				</li>
+				<li id="mobile"><a href="../mobile.html">Mobile</a>
+					<div class = "dropdown">
+						<a href = "../ios.html">iOS</a>
+						<a href = "../android.html">Android</a>
+					</div>
+				</li>
+				<li id="about"><a href="../../about.html">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div id="review_main">
+				<img id="review_img" src="../../images/review_images/pc/EU4_01.png" alt="Europa Universalis IV">
+				
+				<h1>Europa Universalis IV</h1>
+				
+				<div id="article_info">
+					<p>Author: Simon Shoban</p>
+					<p>Date: 2017-04-08</p>
+					<p>Genre: Grand Strategy</p>
+				</div>
+				
+				<p>I lied.</p>
+				
+				<p>Now that you're here, you should check out Europa Universalis IV, it's great, 
+				that loser Sid Meier doesn't want you to know that.</p>
+				
+				<p>Europa Universalis IV is a Grand Strategy game made by Paradox Interactive. At the start
+				of the game, you can choose to play as any country in the world from 1444-1821. The vast majority of
+				players start in 1444 because it is the most supported start date by Paradox and it gives you the most 
+				play time. Also, it's raining a <i>lot</i> right now, but you probably don't care about that.</p>
+				
+				<p>This game has a lot of very complicated mechanics that are still very complicated despite three and a 
+				half years of the developers dumbing it down for us. But it mostly boils down to having more soliders and
+				more money than everyone else. Mostly. Every nation has a ruler with randomly generated stats except at the
+				start of the game where historical leaders are used and their stats are based off of their historical performance.
+				The three stats are administrative, diplomatic, and military; they range from 0-6. These points are mostly used
+				to increase your nation's level of technology and to "core" conquered lands.</p>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class ="review_img" src="../../images/review_images/pc/EU4_02.png" alt="Europe in 1444">
+						<figcaption>Europe in 1444</figcaption>
+					</figure>
+				</div>
+				
+				<p>So now you've picked your nation, then what? Well, that's up to you. Some people like to set a goal
+				of conquering a certain piece of land, some people like to colonize, some people like to trade and makes lots
+				of money, and some people just want to paint the map in their favourite colour. Fortunately, there are 225 EU4 
+				achievements on Steam that can help you figure out what exactly you're working towards. One of the more difficult 
+				achievements is called Sunset Invasion; it requires you to conquer Lisbon, Madrid, Rome, Paris, Amsterdam, and London 
+				as the Aztec. Here's a screenshot of the situation just before I conquered London:</p>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_03.png" alt="Sunset Invasion">
+						<figcaption>The Aztec invasion of Europe</figcaption>
+					</figure>
+				</div>
+				
+				<p>You really can do just about anything in this game, here's a bunch of screenshots showing what an amazing player
+				I am and how great this game is:</p>
+
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_04.png" alt="German Expansion">
+						<figcaption>This looks familiar...</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_05.png" alt="This is Persia!">
+						<figcaption>Goodbye Ottomans!</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_06.png" alt="Massive defeat">
+						<figcaption>That didn't go too well</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_07.png" alt="Ming is mad">
+						<figcaption>Meanwhile in Asia</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_08.png" alt="US declares independence">
+						<figcaption>Freedom!</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_09.png" alt="Swiss and Russian mobilisation">
+						<figcaption>Spooky stuff</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_10.png" alt="Sunset Invasion">
+						<figcaption>Switzerland and Japan vs Russia and Bharat</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_11.png" alt="Strong Protestant Reformation">
+						<figcaption>Even the Italians hate the Pope</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_12.png" alt="Bigly Russia">
+						<figcaption>All belongs to Mother Russia</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_13.png" alt="Breton India">
+						<figcaption>Brittany rules the waves!</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_14.png" alt="Hungary">
+						<figcaption>Hungary Hungary Hippo</figcaption>
+					</figure>
+				</div>
+				
+				<div class="review_img_container">
+					<figure>
+						<img class="review_img" src="../../images/review_images/pc/EU4_15.png" alt="Rich Spain">
+						<figcaption>Remember when Spain was good at making money?</figcaption>
+					</figure>
+				</div>
+				
+				<p>Looks great right? Who <em>doesn't</em> want to spend hours on end staring at a glorified atlas deciding
+				which blob of colour gets beaten up today?</p>
+				
+				<p>You should buy it, preferably right now.</p>
+				
+				<p><strong>MY RATING: GR8/8 would R8 again M8 don't H8, appreci8</strong></p>
+				<h3 id="comment_header">Comments:</h3>
+				<?php
+
+					$tbl_name2="response"; // Switch to table "response"
+
+					//1d
+					$sql2="SELECT * FROM $tbl_name2 JOIN members ON members.member_id = response.member_id WHERE topic_id='$id'";
+					$result2=mysqli_query($GLOBALS["___mysqli_ston"], $sql2);
+
+					while($rows=mysqli_fetch_array($result2)){
+				?>
+				
+				<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+					<tr>
+						<td>
+							<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+								<tr>
+									<td width="77%" bgcolor="#393939"><?php echo $rows['firstname']; ?> </td>
+									<td bgcolor="#393939"><?php echo $rows['datetime']; ?></td>
+								</tr>
+								<tr>
+									<td bgcolor="#393939" colspan="2" ><br><?php echo $rows['response']; ?><br></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table><br>
+				<table>
+				<tr>
+
+				<?php
+					}
+					((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
+				?>
+					<br>
+				<?php
+					if (isLoggedIn()) {
+						$previous = $_SERVER['SCRIPT_URI'];
+						echo 		'<form id="comment_form" method="post" action="../../forum/add_response.php">
+										Post your comments:<br><br>
+
+										<label class="hidden" for="h8_button">hate</label>
+
+										<label><input type="radio" value="H8" name="h8_gr8" id="h8_button"><img class="radio_off" src="../../images/button_images/H8_Button_Idle_Small.png" alt="H8"><img class="radio_on"  src="../../images/button_images/H8_Button_Hover_Small.png" alt="H8"></label>
+										<label class="hidden" for="gr8_button">great</label>
+										<label><input type="radio" value="GR8" name="h8_gr8" id="gr8_button"><img class="radio_off"  src="../../images/button_images/GR8_Button_Idle_Small.png" alt="GR8"><img class="radio_on" src="../../images/button_images/GR8_Button_Hover_Small.png" alt="GR8"></label>
+
+										<label class="hidden" for="comment_section">post comment here</label>
+										<br>
+										<textarea name="response" id="comment_section"></textarea>
+										<input name="id" type="hidden" value="';
+										echo $id;
+										echo '"><input type="submit" id="comment_submit" name="Submit" value="Submit">';
+										echo '<input name="lastpage" type="hidden" value="';
+										echo $previous;
+										echo '">
+									</form>';
+					}
+				?>
+				<br id="clearer">
+			</div>
+		</main>
+		<footer>
+			<p>Copyright &copy; 2017</p>
+			<span id="social_media">
+			<!--icons from https://www.iconfinder.com/Io9mkt-->
+				<a href=""><img src="../../images/social_media/facebook.png" alt="facebook"></a>
+				<a href=""><img src="../../images/social_media/twitter.png" alt="twitter"></a>
+				<a href=""><img src="../../images/social_media/youtube.png" alt="youtube"></a>
+			</span>
+		</footer>
+	</div>
+</body>
+</html>

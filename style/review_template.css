@@ -21,6 +21,10 @@
 .review_img_container {
 	text-align:			center;
 }
+
+.review_img_container figcaption {
+	font-style:			italic;
+}
 .review_img {
 	height:				auto;
 	margin:				20px;
